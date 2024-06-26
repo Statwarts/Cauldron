@@ -1,17 +1,14 @@
 import React from "react";
-import Cauldron from "../../assets/cauldron.png";
+import Nav from "../../components/Nav/Nav";
 
 export default function Home() {
     return (
         <>
-            <div className="bg-black w-full">
-                <div className="container mx-auto">
-                    <div className="flex justify-between items-center py-4">
-                        <div className="flex ">
-                            <div><img src={Cauldron} alt="Cauldron" className="w-10 h-10" /></div>
-                            <div><p className="text-white">Cauldron</p></div>
-                        </div>
-                    </div>
+            {/* gradient bg */}
+            <div className="bg-gradient-to-t from-[#0F1014] to-[#121212] h-screen w-full">
+                <Nav />
+                <div className="flex-center h-full">
+                    <div className="text-white text-4xl">Home</div>
                 </div>
             </div>
         </>
