@@ -6,7 +6,7 @@ const Nav = () => {
 
     const maskStyle = {
         maskImage: 'linear-gradient(to top, transparent 0%, white 70%)',
-        WebkitMaskImage: 'linear-gradient(to top, transparent 40%, white 90%)',
+        WebkitMaskImage: 'linear-gradient(to top, transparent 0%, white 70%)',
         zIndex: '20',
         position: 'absolute',
         top: '0',
