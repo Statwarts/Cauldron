@@ -9,7 +9,7 @@ const Button = ({ title, borderRadius, color }) => {
   const Bgcolor = color ? color : "#1D1D1D";
   const BgcolorLight = `rgba(${parseInt(Bgcolor.slice(1, 3), 16)}, ${parseInt(
     Bgcolor.slice(3, 5),
-    16
+    16,
   )}, ${parseInt(Bgcolor.slice(5, 7), 16)}, 0.1)`;
 
   const BgBlurColor = `radial-gradient(circle at 50% 100%, ${BgcolorLight} 18%, ${Bgcolor})`;
@@ -50,14 +50,14 @@ const Button = ({ title, borderRadius, color }) => {
 
   return (
     <>
-      <div
-        className="relative cursor-pointer group "
-        // onMouseEnter={() => setIsHovered(true)}
-        // onMouseLeave={() => setIsHovered(false)}
-      >
+      <div className="group relative">
         <div
-          className="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-50 transition-all duration-300 blur-[32px]  "
-          style={{ background: BgBlurColor }}
+          className="absolute inset-0 h-full w-full overflow-hidden opacity-0 blur-[32px] transition-all duration-300 group-hover:opacity-50"
+          style={{
+            // background: BgBlurColor,
+            background:
+              "linear-gradient(to right, #00000000, #0071E344, #00000000)",
+          }}
         />
         <div
           style={{ borderRadius: brRadius }}
@@ -67,9 +67,10 @@ const Button = ({ title, borderRadius, color }) => {
             className={``}
             style={{
               borderRadius: `calc(${brRadius} - 1px)`,
-              background: isHovered ? Bgcolor : "#1d1d1d",
+              // background: isHovered ? Bgcolor : "#1d1d1d",
               boxShadow: "inset 0 0 0 0 rgba(255,255,255)",
               transition: "box-shadow 0.3s ease-in-out",
+              background: "linear-gradient(to right, #00000000, #0071E321)",
             }}
             onMouseOver={(e) =>
               (e.currentTarget.style.boxShadow =
@@ -81,12 +82,12 @@ const Button = ({ title, borderRadius, color }) => {
             }
           >
             <div
-              className=" py-2 px-4 flex items-center justify-center gap-1 "
+              className="flex items-center justify-center gap-1 px-2 py-1 md:px-4 md:py-[6px]"
               style={{ borderRadius: `calc(${brRadius} - 1px)` }}
             >
-              <div className="absolute w-3/4 h-[30px] opacity-100  bg-[#ffffff] rounded-full -translate-x-1/2 translate-y-1/2 left-1/2 bottom-0 blur-[14px] mix-blend-overlay"></div>
-              <div className="absolute w-3/4 h-3 bg-[#000000] bottom-0 rounded-full blur-[14px] mix-blend-overlay"></div>
-              <div className="h-5 w-5 flex items-center justify-center text-[#ffffff80] group-hover:text-[#ffffff] transition-all duration-300">
+              <div className="absolute bottom-0 left-1/2 h-[30px] w-3/4 -translate-x-1/2 translate-y-1/2 rounded-full bg-[#ffffff] opacity-50 mix-blend-overlay blur-[14px]"></div>
+              {/* <div className="absolute bottom-0 h-3 w-3/4 rounded-full bg-[#000000] mix-blend-overlay blur-[14px]"></div> */}
+              <div className="flex h-5 w-5 items-center justify-center text-[#ffffff80] transition-all duration-300 group-hover:text-[#ffffff]">
                 <svg
                   width="22"
                   height="22"
@@ -121,7 +122,7 @@ const Button = ({ title, borderRadius, color }) => {
                 </svg>
               </div>
               <h3
-                className="font-[400] text-[16px] leading-[25px] transition-all duration-300   text-[#0071E3]"
+                className="text-[14px] font-[400] leading-[25px] text-[hsl(210,40%,60%)] transition-all duration-300 md:text-[16px]"
                 // style={{
                 //   backgroundImage:
                 //     "linear-gradient(to right, #fff, #fff)",
