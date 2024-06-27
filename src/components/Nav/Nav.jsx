@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Cauldron from '../../assets/cauldron.svg'
+import Cauldron from '../../assets/Cauldron.svg'
 
 const Nav = () => {
 

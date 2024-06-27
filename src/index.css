@@ -23,6 +23,9 @@ body {
     0 0 5px 0.2px rgba(59, 131, 246, 0.35);
 }
 
+
+
+
 @layer utilities {
   .wrapper {
     @apply max-w-7xl lg:mx-auto p-5 md:px-10 xl:px-0 w-full;
