@@ -2,10 +2,12 @@ import React from "react";
 import Nav from "../../components/Nav/Nav";
 import Button from "../../components/buttons/button";
 import Input from "../../components/input/input";
+import Prompt from "../../components/Prompt";
 
 export default function Home() {
   return (
     <>
+    
       <Nav />
       <div className="flex min-h-screen flex-col bg-gradient-to-t from-[#0B0C0F] to-[#0F1014] pt-[100px]">
         <div className="flex-center flex-col gap-12 px-4">
@@ -22,6 +24,10 @@ export default function Home() {
           <Input />
         </div>
       </div>
+      <div className="w-full flex-grow bg-gradient-to-t from-[#0B0C0F] to-[#0F1014]">
+        <Prompt />
+      </div>
+      
     </>
   );
 }
