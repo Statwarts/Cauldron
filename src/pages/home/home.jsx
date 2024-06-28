@@ -2,6 +2,7 @@ import React from "react";
 import Nav from "../../components/Nav/Nav";
 import Button from "../../components/buttons/button";
 import Input from "../../components/input/input";
+import Footer from "../../components/footer/footer";
 import Prompt from "../../components/Prompt";
 
 export default function Home() {
@@ -28,6 +29,7 @@ export default function Home() {
         <Prompt />
       </div>
       
+      <Footer />
     </>
   );
 }
