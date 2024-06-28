@@ -33,8 +33,13 @@ body {
 }
 
 @keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 .animate-scroll {
@@ -50,7 +55,7 @@ body {
 
 @layer utilities {
   .wrapper {
-    @apply max-w-7xl lg:mx-auto p-5 md:px-10 xl:px-0 w-full;
+    @apply max-w-7xl lg:mx-auto p-2 md:px-10 xl:px-0 w-full;
   }
 
   .flex-center {
