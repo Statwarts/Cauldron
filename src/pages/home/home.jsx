@@ -2,6 +2,7 @@ import React from "react";
 import Nav from "../../components/Nav/Nav";
 import Button from "../../components/buttons/button";
 import Input from "../../components/input/input";
+import Footer from "../../components/footer/footer";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
           <Input />
         </div>
       </div>
+      <Footer />
     </>
   );
 }
