@@ -1,4 +1,4 @@
-import React, { useEffect,useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import Nav from "../../components/Nav/Nav";
 import Button from "../../components/buttons/button";
 import Input from "../../components/input/input";
@@ -6,12 +6,14 @@ import Footer from "../../components/footer/footer";
 import Prompt from "../../components/Prompt";
 import WhyCauldron from "../../components/whyCauldron";
 import Background from "../../components/Background";
-import Cauldron from "../../assets/Cauldron.svg";
-import Sparkle from "../../assets/Sparkle.svg";
-import OpenAi from "../../assets/OpenAi.svg";
-import youtube from "../../assets/youtube.svg";
-import reels from "../../assets/reels.svg";
-import ytshorts from "../../assets/ytshorts.svg";
+import {
+  Cauldron,
+  Sparkle,
+  OpenAi,
+  youtube,
+  reels,
+  ytshorts,
+} from "../../assets/image";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "framer-motion";
 export default function Home() {
@@ -19,13 +21,12 @@ export default function Home() {
   const ref = useRef(null);
   const isInView = useInView(ref);
   useEffect(() => {
-    if(isInView){
-      controls.start({opacity:1});
+    if (isInView) {
+      controls.start({ opacity: 1 });
+    } else {
+      controls.start({ opacity: 0, duration: 0.5 });
     }
-    else{
-      controls.start({opacity:0, duration:0.5});
-    }
-  },[isInView]);
+  }, [isInView]);
   return (
     <>
       <Nav />
@@ -49,13 +50,13 @@ export default function Home() {
             </div>
             <div className="flex-center absolute bottom-[80%] right-[20%] md:right-[25%] lg:right-[32%]">
               <img src={Sparkle} alt="Sparkle" />
-              <p className="text-[#E5F1FD] pl-1" >Ideas</p>
+              <p className="pl-1 text-[#E5F1FD]">Ideas</p>
             </div>
             <div className="flex-center absolute bottom-[90%] left-[15%] md:left-[20%] lg:left-[27%]">
               <img src={OpenAi} alt="Sparkle" />
-              <p className="text-[#E5F1FD] pl-1" >Prompt</p>
+              <p className="pl-1 text-[#E5F1FD]">Prompt</p>
             </div>
-            <div className="lg:mb-20 mb-10 mt-16 flex w-40 flex-col">
+            <div className="mb-10 mt-16 flex w-40 flex-col lg:mb-20">
               <motion.img
                 ref={ref}
                 initial={{ opacity: 0 }}
@@ -75,10 +76,9 @@ export default function Home() {
                 className="self-end"
               />
               <motion.img
-                ref={ref} 
+                ref={ref}
                 initial={{ opacity: 0 }}
                 transition={{ duration: 3.2 }}
-                
                 animate={controls}
                 src={ytshorts}
                 alt="youtube"

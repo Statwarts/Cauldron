@@ -1,10 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Cauldron from "../../assets/Cauldron.svg";
 import Input from "../input/input";
-import Instagram from "../../assets/instagram.svg";
-import Github from "../../assets/github.svg";
-import Linkedin from "../../assets/linkedin.svg";
+
+import { Instagram,Github,Linkedin, Cauldron } from "../../assets/image";
 import { motion } from "framer-motion";
 export default function Footer() {
   return (

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Send from "../../assets/send.svg";
+import {Send} from "../../assets/image";
 import { animate, motion } from "framer-motion";
 
 const checkEmail = (email) => {

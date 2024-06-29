@@ -1,6 +1,4 @@
-import whyIcon1 from "../assets/whyIcon1.svg";
-import whyIcon2 from "../assets/whyIcon2.svg";
-import whyIcon3 from "../assets/whyIcon3.svg";
+import { whyIcon1, whyIcon2, whyIcon3 } from "../assets/image";
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 export default function WhyCauldron() {
@@ -49,11 +47,13 @@ export default function WhyCauldron() {
           cost-effectiveness and scalability, driven by a prompt.
         </p>
         <div className="flex flex-wrap justify-center text-[rgb(184,193,199,0.8)] sm:justify-between">
-          {data.map(({ text }) => (
+          {data.map(({ text },index) => (
+            <React.Fragment key={index}>
             <div className={"mb-4 text-pretty" + numOfLines(text)}>
               <div className="mb-1 h-28 rounded-2xl bg-[#121214b7]"></div>
               <p className="pl-2">{text}</p>
             </div>
+            </React.Fragment>
           ))}
         </div>
       </div>
@@ -70,7 +70,7 @@ export default function WhyCauldron() {
         <div className="grid grid-cols-1 gap-2 md:grid-cols-3">
           {batchProcessingData.map(({ imgSrc, text }, index) => (
             <React.Fragment key={index}>
-              <div className="flex flex-col gap-2 items-start p-4 hover:bg-[#121214b7] transition-all rounded-3xl justify-center text-pretty">
+              <div className="flex flex-col items-start justify-center gap-2 text-pretty rounded-3xl p-4 transition-all hover:bg-[#121214b7]">
                 <motion.img
                   onHoverStart={() => {
                     const newHovering = [...isHovering];
@@ -89,7 +89,7 @@ export default function WhyCauldron() {
                     isHovering[index]
                       ? {
                           // filter:
-                            // "drop-shadow(0px 5px 10px rgba(255,255,255,0.1))",
+                          // "drop-shadow(0px 5px 10px rgba(255,255,255,0.1))",
                         }
                       : {
                           // filter: "drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.1))",
@@ -104,8 +104,7 @@ export default function WhyCauldron() {
                   {text}
                 </p>
               </div>
-              {/* {index < batchProcessingData.length - 1 && (
-              )} */}
+             
             </React.Fragment>
           ))}
         </div>
