@@ -10,7 +10,7 @@ const PromptCard = ({ number, prompt, src }) => {
         style={{ whiteSpace: "normal", wordWrap: "break-word" }}
       >
         <span className="bg-[#0071E321] p-1 text-[#0071E3]">
-          Prompt {number}:
+          Prompt :
         </span>{" "}
         {prompt}
       </p>

@@ -36,19 +36,20 @@ body {
   0% {
     transform: translateX(0);
   }
-
   100% {
     transform: translateX(-100%);
   }
 }
 
 .animate-scroll {
-  animation: scroll 40s linear infinite;
+  display: flex;
+  animation: scroll linear infinite;
 }
 
 .paused {
   animation-play-state: paused;
 }
+
 
 
 
