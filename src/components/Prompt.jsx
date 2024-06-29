@@ -42,7 +42,7 @@ export default function Prompt() {
 
   return (
     <div className="wrapper flex flex-col px-4">
-      <div className="flex flex-col px-20">
+      <div className="flex flex-col px-2 md:px-20">
         <p className="py-2 text-[#E3E7EA] font-[300]">
           The Cauldron can produce a variety of content, from short clips to
           extended videos, all while upholding exceptional visual quality and
@@ -54,7 +54,7 @@ export default function Prompt() {
         <div className="h-[1px] bg-[#3A3F45]"></div>
       </div>
 
-      <div className="w-full overflow-hidden px-20 py-2">
+      <div className="w-full overflow-hidden  px-2 md:px-20 py-2">
         <Marquee
           speed={40}
           gradient={true}

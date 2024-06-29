@@ -38,11 +38,14 @@ const Nav = () => {
           <div className="flex-between z-40 w-full">
             <Link to="/" className="flex-center gap-1">
               <img className="w-5" src={Cauldron} alt="Cauldron" />
-              <p className="text-md text-white">Cauldron</p>
+              <p className="text-md text-[#e3e7ea]">Cauldron</p>
             </Link>
-            <div className="flex-center">
-              <Link to="/login" className="text-sm text-white">
-                Login
+            <div className="flex-center rounded-full border border-[#232527] px-2 py-1 transition-all duration-300 hover:border-[#2f3134]">
+              <Link
+                to="/register"
+                className="text-sm text-[#e3e7eac3] transition-all duration-300 hover:text-[#e3e7ea]"
+              >
+                Register
               </Link>
             </div>
           </div>
