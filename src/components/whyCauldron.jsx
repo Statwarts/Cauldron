@@ -51,7 +51,7 @@ export default function WhyCauldron() {
         <div className="flex flex-wrap justify-center text-[rgb(184,193,199,0.8)] sm:justify-between">
           {data.map(({ text }) => (
             <div className={"mb-4 text-pretty" + numOfLines(text)}>
-              <div className="mb-1 h-28 rounded-2xl bg-[rgb(22,24,25)]"></div>
+              <div className="mb-1 h-28 rounded-2xl bg-[#121214b7]"></div>
               <p className="pl-2">{text}</p>
             </div>
           ))}
@@ -67,10 +67,10 @@ export default function WhyCauldron() {
           particularly useful for creators who need to maintain a consistent
           posting schedule.
         </p>
-        <div className="flex flex-wrap justify-center">
+        <div className="grid grid-cols-1 gap-2 md:grid-cols-3">
           {batchProcessingData.map(({ imgSrc, text }, index) => (
             <React.Fragment key={index}>
-              <div className="flex flex-col items-start justify-center text-pretty">
+              <div className="flex flex-col gap-2 items-start p-4 hover:bg-[#121214b7] transition-all rounded-3xl justify-center text-pretty">
                 <motion.img
                   onHoverStart={() => {
                     const newHovering = [...isHovering];
@@ -84,30 +84,28 @@ export default function WhyCauldron() {
                   }}
                   src={imgSrc}
                   alt="icon"
-                  className="m-auto mb-4 w-[96px]"
+                  className="m-auto w-[96px]"
                   animate={
                     isHovering[index]
                       ? {
-                          filter:
-                            "drop-shadow(0px 5px 10px rgba(255,255,255,0.5))",
+                          // filter:
+                            // "drop-shadow(0px 5px 10px rgba(255,255,255,0.1))",
                         }
                       : {
-                          filter: "drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.5))",
+                          // filter: "drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.1))",
                         }
                   }
                   transition={{ duration: 0.5 }}
                   exit={{ filter: "" }}
                 />
 
-                <div className="m-auto p-1 pb-4">
-                  <p className="max-w-[500px] text-[14px] text-[rgb(184,193,199,0.8)] sm:p-2 md:max-w-[300px] md:pl-6">
-                    {text}
-                  </p>
-                </div>
+                <div className="h-[1px] w-full bg-[#3A3F45]"></div>
+                <p className="max-w-[500px] text-[14px] text-[rgb(184,193,199,0.8)] md:max-w-[300px]">
+                  {text}
+                </p>
               </div>
-              {index < batchProcessingData.length - 1 && (
-                <div className="bg-[#3A3F45] md:h-48 lg:ml-1 lg:w-1"></div>
-              )}
+              {/* {index < batchProcessingData.length - 1 && (
+              )} */}
             </React.Fragment>
           ))}
         </div>
