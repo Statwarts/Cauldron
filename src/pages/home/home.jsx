@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect,useRef } from "react";
 import Nav from "../../components/Nav/Nav";
 import Button from "../../components/buttons/button";
 import Input from "../../components/input/input";
@@ -9,8 +9,23 @@ import Background from "../../components/Background";
 import Cauldron from "../../assets/Cauldron.svg";
 import Sparkle from "../../assets/Sparkle.svg";
 import OpenAi from "../../assets/OpenAi.svg";
-
+import youtube from "../../assets/youtube.svg";
+import reels from "../../assets/reels.svg";
+import ytshorts from "../../assets/ytshorts.svg";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "framer-motion";
 export default function Home() {
+  const controls = useAnimation();
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+  useEffect(() => {
+    if(isInView){
+      controls.start({opacity:1});
+    }
+    else{
+      controls.start({opacity:0, duration:0.5});
+    }
+  },[isInView]);
   return (
     <>
       <Nav />
@@ -28,22 +43,53 @@ export default function Home() {
             </h1>
           </div>
           <Input />
-          <div className="wrapper flex-center relative h-[600px]">
-            <div className="flex-center rounded-2xl border-2 border-[hsl(210,100%,60%)] bg-gradient-to-t from-[#0071E3] to-[hsl(210,100%,60%)] p-4">
-              <img src={Cauldron} alt="Cauldron" />
+          <div className="wrapper flex-center relative flex h-[600px] flex-col">
+            <div className="flex-center mt-40 rounded-[32px] border-2 border-[hsl(210,100%,60%)] bg-gradient-to-t from-[#0071E3] to-[hsl(210,100%,60%)] p-4">
+              <img src={Cauldron} alt="Cauldron" width={"120px"} />
             </div>
             <div className="flex-center absolute bottom-[80%] right-[20%] md:right-[25%] lg:right-[32%]">
               <img src={Sparkle} alt="Sparkle" />
-              <p className="text-[#E5F1FD]">Ideas</p>
+              <p className="text-[#E5F1FD] pl-1" >Ideas</p>
             </div>
             <div className="flex-center absolute bottom-[90%] left-[15%] md:left-[20%] lg:left-[27%]">
               <img src={OpenAi} alt="Sparkle" />
-              <p className="text-[#E5F1FD]">Prompt</p>
+              <p className="text-[#E5F1FD] pl-1" >Prompt</p>
+            </div>
+            <div className="lg:mb-20 mb-10 mt-16 flex w-40 flex-col">
+              <motion.img
+                ref={ref}
+                initial={{ opacity: 0 }}
+                animate={controls}
+                transition={{ duration: 1.2 }}
+                src={youtube}
+                alt="youtube"
+                className="self-start"
+              />
+              <motion.img
+                ref={ref}
+                initial={{ opacity: 0 }}
+                animate={controls}
+                transition={{ duration: 2.2 }}
+                src={reels}
+                alt="youtube"
+                className="self-end"
+              />
+              <motion.img
+                ref={ref} 
+                initial={{ opacity: 0 }}
+                transition={{ duration: 3.2 }}
+                
+                animate={controls}
+                src={ytshorts}
+                alt="youtube"
+                className="self-start"
+              />
             </div>
           </div>
+          <div></div>
         </div>
       </div>
-      <WhyCauldron  />
+      <WhyCauldron />
       <div className="w-full flex-grow bg-gradient-to-t from-[#0B0C0F] to-[#0F1014]">
         <Prompt />
       </div>
