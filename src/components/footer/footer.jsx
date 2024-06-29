@@ -29,7 +29,7 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className=" mt-16 m-auto lg:mr-32">
-                    <p className="mb-10 text-center text-[rgb(188,207,226)] text-xl lg:text-2xl pl-10 pr-10 max-w-md">Sign up for the <span className="">waitlist</span>  and be the first to try Cauldron!</p>
+                    <p className="mb-10 text-center text-[rgb(188,207,226)] text-xl lg:text-2xl pl-10 pr-10 max-w-md">Sign up for the <span className="git ">waitlist</span>  and be the first to try Cauldron!</p>
                     <div className="flex justify-center"><Input /></div>
                 </div>
             </div>

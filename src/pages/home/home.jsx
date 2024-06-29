@@ -4,6 +4,7 @@ import Button from "../../components/buttons/button";
 import Input from "../../components/input/input";
 import Footer from "../../components/footer/footer";
 import Prompt from "../../components/Prompt";
+import WhyCauldron from "../../components/whyCauldron";
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
           <Input />
         </div>
       </div>
+      <WhyCauldron  />
       <div className="w-full flex-grow bg-gradient-to-t from-[#0B0C0F] to-[#0F1014]">
         <Prompt />
       </div>
