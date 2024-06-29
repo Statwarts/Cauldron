@@ -5,11 +5,11 @@ export default function Prompt() {
   const scrollContainer = useRef(null);
 
   const handleMouseEnter = () => {
-    scrollContainer.current.classList.add("paused");
+    scrollContainer.current.style.animationPlayState = 'paused';
   };
 
   const handleMouseLeave = () => {
-    scrollContainer.current.classList.remove("paused");
+    scrollContainer.current.style.animationPlayState = 'running';
   };
 
   const promptData = [
@@ -37,9 +37,9 @@ export default function Prompt() {
 
   useEffect(() => {
     const container = scrollContainer.current;
-    const content = container.innerHTML;
-    container.innerHTML += content;
-    container.style.animationDuration = `${promptData.length * 10}s`;
+    const animationDuration = promptData.length * 10;
+
+    container.style.animation = `scroll ${animationDuration}s linear infinite`;
   }, [promptData.length]);
 
   return (
@@ -58,23 +58,25 @@ export default function Prompt() {
 
       <div className="w-full overflow-hidden py-2">
         <div
-          className="animate-scroll flex items-center whitespace-nowrap"
+          className="scroll-container"
           ref={scrollContainer}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          {promptData.map((data, index) => (
-            <div
-              key={index}
-              className="inline-block w-full px-3 py-2 sm:w-3/4 xl:w-1/2 2xl:w-1/2"
-            >
-              <PromptCard
-                number={data.number}
-                prompt={data.prompt}
-                src={data.src}
-              />
-            </div>
-          ))}
+          <div className="scroll-content">
+            {promptData.concat(promptData).map((data, index) => (
+              <div
+                key={index}
+                className="inline-block w-full px-3 py-2 sm:w-3/4 xl:w-1/2 2xl:w-1/2"
+              >
+                <PromptCard
+                  number={data.number}
+                  prompt={data.prompt}
+                  src={data.src}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

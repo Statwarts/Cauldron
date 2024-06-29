@@ -32,6 +32,7 @@ body {
   background-color: hsla(210, 100%, 45%, 0.2);
 }
 
+
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -41,14 +42,18 @@ body {
   }
 }
 
-.animate-scroll {
+.scroll-container {
   display: flex;
-  animation: scroll linear infinite;
+  width: 200%;
 }
 
-.paused {
-  animation-play-state: paused;
+.scroll-content {
+  display: flex;
+  width: 100%;
 }
+
+
+
 
 
 
