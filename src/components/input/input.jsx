@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import {Send} from "../../assets/image";
+import { Send } from "../../assets/image";
 import { animate, motion } from "framer-motion";
 import store from "../../../store";
 import { Link } from "react-router-dom";
+
 const checkEmail = (email) => {
   const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
   return emailRegex.test(email);
@@ -50,6 +51,13 @@ export default function Input() {
     setMessageToUser("Joining waitlist");
     window.location.href = "/register";
   };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      handleSubmit();
+    }
+  };
+
   return (
     <div className="glow flex w-64 md:w-80 lg:w-96 justify-between overflow-hidden rounded-3xl border-[1px] border-[hsl(210,100%,45%)] bg-[rgb(4,1,21,0.1)] p-1 shadow-md shadow-black transition-all duration-300">
       <input
@@ -57,6 +65,7 @@ export default function Input() {
         onChange={(e) => setUserEmail(e.target.value)}
         type="email"
         placeholder={messageToUser}
+        onKeyDown={handleKeyDown}
         className="w-full cursor-text bg-transparent p-1 pl-4 text-white outline-none"
       />
       <motion.div
@@ -78,7 +87,6 @@ export default function Input() {
         //       scale: 1.1,
         //   }}
       >
-        
         <button
           className="flex items-center"
           onClick={() => {
