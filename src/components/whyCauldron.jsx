@@ -54,7 +54,7 @@ export default function WhyCauldron() {
 
             </div>
 
-            <div className="m-auto max-w-[960px] text-[rgb(193,201,207)] pb-40 pl-4 pr-4">
+            <div className="m-auto max-w-[960px] text-[rgb(193,201,207)] pb-40 ">
                 <h1 className="text-4xl font-semibold pl-5 lg:pl-0 ">Batch Processing</h1>
                 <p className="max-w-3xl lg:max-w-[900px] mb-20 pl-5 lg:pl-0">The ability to create multiple videos in a short amount of time is particularly useful for creators who need to maintain a consistent posting schedule.</p>
                 <div className="flex flex-wrap justify-center">
@@ -82,12 +82,12 @@ export default function WhyCauldron() {
                             exit={{ filter: '' }}
                             />
                             
-                            <div className="m-auto">
-                            <p className="max-w-[500px] md:max-w-[300px] text-[14px] p-2 pl-6 text-[rgb(184,193,199,0.8)]">{text}</p>
+                            <div className="m-auto p-1 pb-4">
+                                <p className="max-w-[500px] md:max-w-[300px] text-[14px] sm:p-2 md:pl-6 text-[rgb(184,193,199,0.8)]">{text}</p>
                             </div>
-                            </div>
+                        </div>
                         {index  < batchProcessingData.length - 1 && (
-                            <div className="lg:w-1 bg-[#3A3F45] lg:h-48 md:h-32 lg:ml-1"></div>
+                            <div className="lg:w-1 bg-[#3A3F45] md:h-48 lg:ml-1"></div>
                         )}
                         </React.Fragment>   
                     ))}
