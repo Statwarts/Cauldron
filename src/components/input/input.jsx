@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import {Send} from "../../assets/image";
 import { animate, motion } from "framer-motion";
-
+import store from "../../../store";
+import { Link } from "react-router-dom";
 const checkEmail = (email) => {
   const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
   return emailRegex.test(email);
@@ -34,6 +35,7 @@ export default function Input() {
       }, 1000);
     }
   }, [messageToUser]);
+  
   const handleSubmit = () => {
     if (userEmail == "") {
       return;
@@ -43,7 +45,10 @@ export default function Input() {
       return;
     }
     console.log(userEmail);
-    setMessageToUser("Joined waitlist");
+    window.localStorage.setItem("email", userEmail);
+    
+    setMessageToUser("Joining waitlist");
+    window.location.href = "/register";
   };
   return (
     <div className="glow flex w-64 md:w-80 lg:w-96 justify-between overflow-hidden rounded-3xl border-[1px] border-[hsl(210,100%,45%)] bg-[rgb(4,1,21,0.1)] p-1 shadow-md shadow-black transition-all duration-300">
@@ -73,6 +78,7 @@ export default function Input() {
         //       scale: 1.1,
         //   }}
       >
+        
         <button
           className="flex items-center"
           onClick={() => {
