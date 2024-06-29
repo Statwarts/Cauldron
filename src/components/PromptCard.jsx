@@ -5,6 +5,7 @@ const PromptCard = ({ number, prompt, src }) => {
 
   return (
     <>
+    <div className="w-[270px]">
       <p
         className="text-white"
         style={{ whiteSpace: "normal", wordWrap: "break-word" }}
@@ -14,7 +15,7 @@ const PromptCard = ({ number, prompt, src }) => {
         </span>{" "}
         {prompt}
       </p>
-      <div className="aspect-w-9 aspect-h-16 min-h-[500px]">
+      <div className="aspect-w-9 aspect-h-16 min-h-[500px] py-2">
         <iframe
           width="269px"
           height="480px"
@@ -26,6 +27,7 @@ const PromptCard = ({ number, prompt, src }) => {
           //   allowFullScreen
           // dont show title
         ></iframe>
+      </div>
       </div>
     </>
   );
