@@ -12,15 +12,16 @@ const Nav = () => {
     left: "0",
     right: "0",
     bottom: "0",
-    backdropFilter: "blur(12px)",
+    background: "#0F101491",
+    backdropFilter: "blur(6px)",
   };
 
   return (
     <>
-      <div className="warpper fixed h-[60px] w-full border-[#414141] z-20">
-        <div className="flex-center relative m-auto h-full w-full max-w-[1400px] py-3">
+      <div className="fixed z-20 h-[60px] w-full border-[#414141]">
+        <div className="wrapper flex-center relative m-auto h-full w-full py-3">
           <div style={maskStyle} />
-          <div className="flex-between z-40 w-full px-4 lg:px-8">
+          <div className="flex-between z-40 w-full">
             <Link to="/" className="flex-center gap-1">
               <img className="w-5" src={Cauldron} alt="Cauldron" />
               <p className="text-md text-white">Cauldron</p>

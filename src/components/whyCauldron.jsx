@@ -1,13 +1,16 @@
 import whyIcon1 from "../assets/whyIcon1.svg";
 import whyIcon2 from "../assets/whyIcon2.svg";
 import whyIcon3 from "../assets/whyIcon3.svg";
-import React from "react";
+import React,{useState,useEffect} from "react";
+import {motion} from "framer-motion";
 export default function WhyCauldron() {
+
+    const [isHovering, setIsHovering] = useState([false,false,false]);
     const numOfLines = (text) => {
         if(text.length > 100) {
-            return " max-w-[420px]";
+            return " md:max-w-[420px]";
         }
-        return " max-w-[260px]";
+        return " md:max-w-[260px]";
     }
     const data = [
         {text : "Faceless videos allow for a consistent visual style and branding that isn’t reliant on the creator’s appearance, which can be more scalable in the long term."},
@@ -36,7 +39,7 @@ export default function WhyCauldron() {
             <div className="m-auto max-w-[700px] text-[rgb(193,201,207)] pb-40">
                 <h1 className="text-4xl font-semibold ">Reduced Production Costs</h1>
                 <p className="max-w-3xl mb-20">Efficient video production with faceless content ensures cost-effectiveness and scalability, driven by a prompt.</p>
-                <div className="flex justify-between flex-wrap text-[rgb(184,193,199,0.8)]">
+                <div className="flex justify-center sm:justify-between flex-wrap text-[rgb(184,193,199,0.8)]">
                     {
                         data.map(({text}) => (
                         <div className={"text-pretty mb-4" + numOfLines(text)}>
@@ -51,20 +54,40 @@ export default function WhyCauldron() {
 
             </div>
 
-            <div className="m-auto max-w-[890px] text-[rgb(193,201,207)] pb-40 pl-4 pr-4">
-                <h1 className="text-4xl font-semibold ">Batch Processing</h1>
-                <p className="max-w-3xl mb-20">The ability to create multiple videos in a short amount of time is particularly useful for creators who need to maintain a consistent posting schedule.</p>
-                <div className="flex">
+            <div className="m-auto max-w-[960px] text-[rgb(193,201,207)] pb-40 pl-4 pr-4">
+                <h1 className="text-4xl font-semibold pl-5 lg:pl-0 ">Batch Processing</h1>
+                <p className="max-w-3xl lg:max-w-[900px] mb-20 pl-5 lg:pl-0">The ability to create multiple videos in a short amount of time is particularly useful for creators who need to maintain a consistent posting schedule.</p>
+                <div className="flex flex-wrap justify-center">
                     {batchProcessingData.map(({imgSrc, text},index) => (
                         <React.Fragment key={index}>
                         <div className="flex flex-col justify-center text-pretty items-start ">
-                            <img src={imgSrc} alt="icon" className="w-[96px] m-auto mb-4" />
+                            
+                            <motion.img 
+                            onHoverStart={() => {
+                                const newHovering = [...isHovering];
+                                newHovering[index] = true;
+                                setIsHovering(newHovering)
+                            }}
+                            onHoverEnd={() => {
+                                const newHovering = [...isHovering];
+                                newHovering[index] = false;
+                                setIsHovering(newHovering)}}
+                            src={imgSrc} alt="icon" className="w-[96px] m-auto mb-4 " 
+                             animate={isHovering[index]? {
+                                filter : 'drop-shadow(0px 5px 10px rgba(255,255,255,0.5))'
+                            } : {
+                                filter : 'drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.5))'
+                            }  }
+                            transition={{duration:0.5}}
+                            exit={{ filter: '' }}
+                            />
+                            
                             <div className="m-auto">
-                            <p className="max-w-[500px] text-[14px] p-3 pl-4 text-[rgb(184,193,199,0.8)]">{text}</p>
+                            <p className="max-w-[500px] md:max-w-[300px] text-[14px] p-2 pl-6 text-[rgb(184,193,199,0.8)]">{text}</p>
                             </div>
                             </div>
                         {index  < batchProcessingData.length - 1 && (
-                            <div className="w-1 bg-[#3A3F45] lg:h-48 md:h-32 "></div>
+                            <div className="lg:w-1 bg-[#3A3F45] lg:h-48 md:h-32 lg:ml-1"></div>
                         )}
                         </React.Fragment>   
                     ))}

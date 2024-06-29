@@ -8,10 +8,11 @@ export default {
       },
       dropShadow: {
         "socialMedia": "0px 1px 2px rgba(255, 255, 255, 0.25)",
+        "img": "2px 4px 4px rgba(255, 255, 255, 0.25)",
       },
     },
     screens: {
-      xs: "480px",
+      xs: {max: "480px"},
       sm: "640px",
       md: "768px",
       lg: "1024px",
