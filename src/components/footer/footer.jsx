@@ -5,6 +5,7 @@ import Input from "../input/input";
 import Instagram from "../../assets/instagram.svg";
 import Github from "../../assets/github.svg";
 import Linkedin from "../../assets/linkedin.svg";
+import { motion } from "framer-motion";
 export default function Footer() {
     return (
         <>
@@ -34,8 +35,21 @@ export default function Footer() {
                 </div>
             </div>
             <div className="flex justify-center gap-10 pb-6 text-[rgb(227,231,234,0.7)] text-sm">
+                <motion.div
+                    whileHover = {{
+                        color: "#0071E3"
+                    }}
+                >
+
                 <Link to= "/">Terms of Service</Link>
+                </motion.div>
+                <motion.div
+                    whileHover = {{
+                        color: "#0071E3"
+                    }}
+                >
                 <Link to= "/">Privacy Policy</Link>
+                </motion.div>
             </div>
         </div>
         </>
