@@ -5,6 +5,7 @@ import Pricing from './pages/pricing/pricing'
 import Register from './pages/register/register'
 import PrivacyPolicy from "./pages/legalStuff/privacyPolicyPage"
 import TermsofService from "./pages/legalStuff/TermsofService"
+import Nav from './components/Nav/Nav'
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
+    <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path= "/register" element={<Register />} />

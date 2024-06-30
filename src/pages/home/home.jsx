@@ -29,7 +29,7 @@ export default function Home() {
   }, [isInView]);
   return (
     <>
-      <Nav />
+      {/* <Nav /> */}
       <Background />
       <div className="flex h-full min-h-screen flex-col bg-gradient-to-t from-[#0B0C0F] to-[#0F1014] pt-[100px]">
         <div className="flex-center flex-col gap-12 px-4">
