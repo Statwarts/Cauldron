@@ -6,7 +6,7 @@
 // import ytshorts from "";
 
 
-import Cauldron from './cauldron.svg';
+import Cauldron from './Cauldron.svg';
 import Sparkle from "./Sparkle.svg";
 import OpenAi from "./OpenAi.svg";
 import youtube from "./youtube.svg";
