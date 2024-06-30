@@ -5,23 +5,28 @@ import "../../../Firebase/firebaseConfig";
 import Notification from "../../components/notification/notification";
 import { Cauldron } from "../../assets/image";
 import Nav from "../../components/Nav/Nav";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
+
 export default function Register() {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState(window.localStorage.getItem("email"));
+  const [whyUse, setWhyUse] = useState("");
   const [showNotification, setShowNotification] = useState(false);
-  //   console.log(window.localStorage.getItem("email"));
+
   const handleSubmit = () => {
     if (email === "" || email === null) {
       setShowNotification(2);
       return;
     }
-    if (name == "" || name == null) {
+    if (name === "" || name === null) {
       setShowNotification(1);
       return;
     }
-    register(email, name, phone);
+    register(email, name, phone, whyUse);
   };
+
   useEffect(() => {
     if (showNotification) {
       setTimeout(() => {
@@ -29,6 +34,7 @@ export default function Register() {
       }, 2000);
     }
   }, [showNotification]);
+
   return (
     <>
       <Nav />
@@ -61,12 +67,42 @@ export default function Register() {
             className="w-[400px] rounded-full border border-[#232527] bg-[#121314b7] p-2 px-4 font-[300] text-[#e3e7eac3] outline-none placeholder:text-[#e3e7ea73] focus:border-[#2f3134] xs:w-[300px] md:w-[500px] xl:w-[600px]"
             onChange={(e) => setName(e.target.value)}
           />
+          <div className="w-[400px] xs:w-[300px] md:w-[500px] xl:w-[600px]">
+            <PhoneInput
+              country={"in"}
+              value={phone}
+              onChange={setPhone}
+              placeholder="Phone Number (Optional)"
+              inputStyle={{
+                width: "100%",
+                borderRadius: "50px",
+                border: "1px solid #232527",
+                backgroundColor: "#121314b7",
+                color: "#e3e7eac3",
+                outline: "none",
+              }}
+              dropdownStyle={{
+                borderRadius: "10px",
+                border: "1px solid #232527",
+                backgroundColor: "#121314b7",
+                color: "#e3e7eac3",
+              }}
+              buttonStyle={{
+                backgroundColor: "#121314b7",
+                border: "none",
+              }}
+              containerClass="phone-input-container"
+              inputClass="phone-input"
+              buttonClass="phone-input-button"
+              dropdownClass="phone-input-dropdown"
+            />
+          </div>
           <input
-            type="tel"
-            value={phone}
-            placeholder="Phone Number"
+            type="text"
+            value={whyUse}
+            placeholder="Why do you want to use Cauldron? (Optional)"
             className="w-[400px] rounded-full border border-[#232527] bg-[#121314b7] p-2 px-4 font-[300] text-[#e3e7eac3] outline-none placeholder:text-[#e3e7ea73] focus:border-[#2f3134] xs:w-[300px] md:w-[500px] xl:w-[600px]"
-            onChange={(e) => setPhone(e.target.value)}
+            onChange={(e) => setWhyUse(e.target.value)}
           />
           <div
             className="w-[400px] cursor-pointer rounded-full border-2 border-[hsl(210,100%,60%)] bg-gradient-to-t from-[#0071E3] to-[hsl(210,100%,60%)] p-2 text-center text-white transition-all duration-300 hover:brightness-105 xs:w-[300px] md:w-[500px] xl:w-[600px]"
@@ -83,6 +119,11 @@ export default function Register() {
         <Notification
           isModalVisible={showNotification === 2}
           text="Please enter your Email!!"
+          textColor="#e3e7eac3"
+        />
+        <Notification
+          isModalVisible={showNotification === 3}
+          text="Please enter why you want to use Cauldron!! "
           textColor="#e3e7eac3"
         />
       </div>
