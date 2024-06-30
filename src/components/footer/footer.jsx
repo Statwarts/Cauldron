@@ -66,14 +66,14 @@ export default function Footer() {
               color: "#0071E3",
             }}
           >
-            <Link to="/">Terms of Service</Link>
+            <Link to="/termsofservice">Terms of Service</Link>
           </motion.div>
           <motion.div
             whileHover={{
               color: "#0071E3",
             }}
           >
-            <Link to="/">Privacy Policy</Link>
+            <Link to="/privacypolicy">Privacy Policy</Link>
           </motion.div>
         </div>
       </div>
