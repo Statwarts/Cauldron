@@ -3,7 +3,7 @@ import Home from './pages/home/home'
 import DashboardRoute from './pages/dashboard/dashboardRoute'
 import Pricing from './pages/pricing/pricing'
 import Register from './pages/register/register'
-import PrivacyPolicy from "./pages/legalStuff/privacyPolicy"
+import PrivacyPolicy from "./pages/legalStuff/privacyPolicyPage"
 import TermsofService from "./pages/legalStuff/TermsofService"
 
 function App() {
