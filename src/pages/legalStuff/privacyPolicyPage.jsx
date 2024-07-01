@@ -1,4 +1,10 @@
+import { useEffect } from "react";
+
 export default function PrivacyPolicy() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="h-full text-balance bg-gradient-to-t from-[rgb(11,12,15)] to-[#0F1014] p-5 text-[#E5F1FD]">
       <div className="bg-gradient-to-t from-[#9dabc1] to-blue-200 bg-clip-text pb-10 pt-10 text-center text-5xl font-semibold text-transparent">
@@ -6,10 +12,11 @@ export default function PrivacyPolicy() {
       </div>
       <div className="m-auto flex max-w-4xl flex-col justify-center">
         <p>
-          At Cauldron, accessible from <a href = "https://www.cauldron.live"> cauldron.live</a>, one of our main priorities is the
-          privacy of our visitors. This Privacy Policy document contains types
-          of information that is collected and recorded by Cauldron and how we
-          use it.
+          At Cauldron, accessible from{" "}
+          <a href="https://www.cauldron.live"> cauldron.live</a>, one of our
+          main priorities is the privacy of our visitors. This Privacy Policy
+          document contains types of information that is collected and recorded
+          by Cauldron and how we use it.
         </p>
 
         <p>

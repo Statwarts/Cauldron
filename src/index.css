@@ -81,7 +81,35 @@ body {
   width: 100%;
 }
 
+/* for Phone number input dropdown */
+.country:hover {
+  background-color: #212121 !important;
+}
 
+.highlight {
+  background-color: #212121 !important;
+}
+
+.phone-input-button {
+  background-color: #212121 !important;
+}
+
+.flag-dropdown{
+  background-color: #111213 !important;
+  border-bottom-left-radius: 99px !important;
+  border-top-left-radius: 99px !important;
+  border-left: 1px solid #212121 !important;
+  border-top: 1px solid #212121 !important;
+  border-bottom: 1px solid #212121 !important;
+  border-right: none;
+}
+
+.selected-flag {
+  background-color: #111213 !important;
+  border-bottom-left-radius: 99px !important;
+  border-top-left-radius: 99px !important;
+  overflow: hidden !important;
+}
 
 @layer utilities {
   .wrapper {
