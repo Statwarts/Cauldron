@@ -29,7 +29,7 @@ export default function Home() {
   }, [isInView]);
   return (
     <>
-      <Nav />
+      {/* <Nav /> */}
       <Background />
       <div className="flex h-full min-h-screen flex-col bg-gradient-to-t from-[#0B0C0F] to-[#0F1014] pt-[100px]">
         <div className="flex-center flex-col gap-12 px-4">
@@ -39,7 +39,7 @@ export default function Home() {
               borderRadius="32px"
               color="#0071E3"
             />
-            <h1 className="h-20 bg-gradient-to-t from-[#9dabc1] to-white bg-clip-text text-3xl font-semibold tracking-tight text-transparent shadow-lg xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+            <h1 className="h-20 text-center bg-gradient-to-t from-[#9dabc1] to-white bg-clip-text text-3xl font-semibold tracking-tight text-transparent shadow-lg xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
               Faceless Video Engine
             </h1>
           </div>
