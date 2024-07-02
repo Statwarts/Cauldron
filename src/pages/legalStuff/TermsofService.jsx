@@ -1,4 +1,10 @@
-export default function TermsofService() {
+import { useEffect } from "react";
+
+export default function TermsOfService() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="h-full text-balance bg-gradient-to-t from-[rgb(11,12,15)] to-[#0F1014] p-5 text-[#E5F1FD]">
       <div className="bg-gradient-to-t from-[#9dabc1] to-blue-200 bg-clip-text pb-10 pt-10 text-center text-5xl font-semibold text-transparent">
@@ -13,10 +19,11 @@ export default function TermsofService() {
           <a href="https://www.cauldron.live"> cauldron.live</a>.
         </p>
 
-        <p >
+        <p>
           By accessing this website we assume you accept these terms and
-          conditions.<br/> Do not continue to use Cauldron if you do not agree to
-          take all of the terms and conditions stated on this page.
+          conditions.
+          <br /> Do not continue to use Cauldron if you do not agree to take all
+          of the terms and conditions stated on this page.
         </p>
 
         <p>
