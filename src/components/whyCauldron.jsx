@@ -58,7 +58,7 @@ export default function WhyCauldron() {
         </div>
       </div>
 
-      <div className="m-auto max-w-[960px] pb-40 text-[rgb(193,201,207)]">
+      <div className="m-auto max-w-[960px] pb-40 text-[rgb(193,201,207)] items-center">
         <h1 className="pl-5 text-4xl font-semibold lg:pl-0">
           Batch Processing
         </h1>
