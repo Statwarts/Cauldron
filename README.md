@@ -1,4 +1,4 @@
-![Cauldron Logo](https://github.com/Statwarts/Cauldron/blob/main/src/assets/cauldron.svg)
+![Cauldron Logo](https://github.com/Statwarts/Cauldron/blob/main/src/assets/svg/cauldron.svg)
 
 # Cauldron
 
