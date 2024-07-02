@@ -85,7 +85,7 @@ Cauldron is licensed under the MIT License. See the [LICENSE](LICENSE) file for 
 For any questions or support, please contact:
 
 - **Email**: support@cauldron.com
-- **GitHub**: [https://github.com/yourusername/cauldron](https://github.com/yourusername/cauldron)
+- **GitHub**: [https://github.com/Statwarts/cauldron](https://github.com/Statwarts/cauldron)
 
 ---
 
