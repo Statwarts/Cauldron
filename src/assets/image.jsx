@@ -6,20 +6,21 @@
 // import ytshorts from "";
 
 
-import Cauldron from './Cauldron.svg';
-import Sparkle from "./Sparkle.svg";
-import OpenAi from "./OpenAi.svg";
-import youtube from "./youtube.svg";
-import reels from "./reels.svg";
-import ytshorts from "./ytshorts.svg";
-import Instagram from "./instagram.svg";
-import Github from "./github.svg";
-import Linkedin from "./linkedin.svg";
-import whyIcon1 from "./whyIcon1.svg";
-import whyIcon2 from "./whyIcon2.svg";
-import whyIcon3 from "./whyIcon3.svg";
-import Bg from "./Bg.svg";
-import Send from "./send.svg";
+import Cauldron from './svg/cauldron.svg';
+import Sparkle from "./svg/Sparkle.svg";
+import OpenAi from "./svg/OpenAi.svg";
+import youtube from "./svg/youtube.svg";
+import reels from "./svg/reels.svg";
+import ytshorts from "./svg/ytshorts.svg";
+import Instagram from "./svg/instagram.svg";
+import Github from "./svg/github.svg";
+import Linkedin from "./svg/linkedin.svg";
+import whyIcon1 from "./svg/whyIcon1.svg";
+import whyIcon2 from "./svg/whyIcon2.svg";
+import whyIcon3 from "./svg/whyIcon3.svg";
+import Bg from "./svg/Bg.svg";
+import Send from "./svg/send.svg";
+
 
 export  {
     Cauldron,

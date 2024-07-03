@@ -7,29 +7,34 @@ import { Cauldron } from "../../assets/image";
 import Nav from "../../components/Nav/Nav";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
+import Confetti from "react-confetti";
+import Modal from "../../components/modal";
 
 export default function Register() {
+  
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState(window.localStorage.getItem("email"));
   const [whyUse, setWhyUse] = useState("");
   const [showNotification, setShowNotification] = useState(false);
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
 
-  const handleSubmit = () => {
-    if (whyUse === "" || whyUse === null) {
-      setShowNotification(3);
-      return;
-    }
-    if (email === "" || email === null) {
+  const handleSubmit = async () => {
+    if (!email) {
       setShowNotification(2);
       return;
     }
-    if (name === "" || name === null) {
+    if (!name) {
       setShowNotification(1);
       return;
     }
-    register(email, name, phone, whyUse);
+
+    const success = await register(email, name, phone, whyUse);
+    if (success) {
+      setShowSuccessModal(true);
+    }
   };
+
 
   useEffect(() => {
     if (showNotification) {
@@ -121,8 +126,8 @@ export default function Register() {
             />
           </div>
           <div
-            className="w-[400px] cursor-pointer rounded-full border-2 border-[hsl(210,100%,60%)] bg-gradient-to-t from-[#0071E3] to-[hsl(210,100%,60%)] p-2 text-center text-white transition-all duration-300 hover:brightness-105 xs:w-[300px] md:w-[500px] xl:w-[600px]"
-            onClick={() => handleSubmit()}
+            className="w-[400px] xs:w-[300px] md:w-[500px] xl:w-[600px] cursor-pointer rounded-full border-2 border-[hsl(210,100%,60%)] bg-gradient-to-t from-[#0071E3] to-[hsl(210,100%,60%)] p-2 text-center text-white transition-all duration-300 hover:brightness-105"
+            onClick={handleSubmit}
           >
             Register
           </div>
@@ -142,6 +147,15 @@ export default function Register() {
           text="Don't keep it blank atleast write a joke ;)"
           textColor="#e3e7eac3"
         />
+
+        {showSuccessModal && (
+          <Confetti
+            width={window.innerWidth}
+            height={window.innerHeight}
+            numberOfPieces={50}
+            friction={1.0}
+          />
+        )}
       </div>
     </>
   );
