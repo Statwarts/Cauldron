@@ -2,12 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Input from "../input/input";
 
-import { Instagram,Github,Linkedin, Cauldron } from "../../assets/image";
+import { Instagram, Github, Linkedin, Cauldron } from "../../assets/image";
 import { motion } from "framer-motion";
 export default function Footer() {
   return (
     <>
-      <div className="bg-[rgb(11,11,14)] text-white pt-10">
+      <div className="bg-[rgb(11,11,14)] pt-10 text-white">
         <div className="mb-20 flex flex-wrap-reverse justify-between">
           <div className="m-auto flex flex-col justify-center gap-2 pl-2 pt-20 md:pl-10 md:pt-0 lg:ml-32 lg:justify-normal lg:pl-0">
             <img
@@ -51,11 +51,12 @@ export default function Footer() {
             </div>
           </div>
           <div className="m-auto mt-16 lg:mr-32">
-          <p className="mb-10 max-w-md pl-10 pr-10 text-center text-xl text-[rgb(188,207,226)] lg:text-2xl">
-          Sign up for the <span className="git">waitlist</span> and be the first
-          to <span className="instrument-serif-regular-italic">try</span>{" "}
-          Cauldron!
-        </p>
+            <p className="mb-10 max-w-md pl-10 pr-10 text-center text-xl text-[rgb(188,207,226)] lg:text-2xl">
+              Register for the <span className="git">waitlist</span> and be the
+              first to{" "}
+              <span className="instrument-serif-regular-italic">try</span>{" "}
+              Cauldron!
+            </p>
             <div className="flex justify-center">
               <Input />
             </div>

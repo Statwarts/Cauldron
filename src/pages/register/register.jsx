@@ -50,7 +50,7 @@ export default function Register() {
             className="m-auto w-[70px] sm:m-0 lg:w-[85px]"
           />
           <p className="max-w-md pl-10 pr-10 text-center text-xl text-[rgb(188,207,226)] lg:text-2xl">
-            Sign up for the <span className="git">waitlist</span> and be the
+            Register for the <span className="git">waitlist</span> and be the
             first to{" "}
             <span className="instrument-serif-regular-italic">try</span>{" "}
             Cauldron!
