@@ -9,9 +9,9 @@ import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import Confetti from "react-confetti";
 import Modal from "../../components/modal";
+import Loader from "./Loader";
 
 export default function Register() {
-  
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState(window.localStorage.getItem("email"));
@@ -34,7 +34,6 @@ export default function Register() {
       setShowSuccessModal(true);
     }
   };
-
 
   useEffect(() => {
     if (showNotification) {
@@ -126,11 +125,12 @@ export default function Register() {
             />
           </div>
           <div
-            className="w-[400px] xs:w-[300px] md:w-[500px] xl:w-[600px] cursor-pointer rounded-full border-2 border-[hsl(210,100%,60%)] bg-gradient-to-t from-[#0071E3] to-[hsl(210,100%,60%)] p-2 text-center text-white transition-all duration-300 hover:brightness-105"
+            className="w-[400px] cursor-pointer rounded-full border-2 border-[hsl(210,100%,60%)] bg-gradient-to-t from-[#0071E3] to-[hsl(210,100%,60%)] p-2 text-center text-white transition-all duration-300 hover:brightness-105 xs:w-[300px] md:w-[500px] xl:w-[600px]"
             onClick={handleSubmit}
           >
             Register
           </div>
+          <Loader />
         </div>
         <Notification
           isModalVisible={showNotification === 1}
