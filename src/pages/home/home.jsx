@@ -42,6 +42,15 @@ export default function Home() {
             <h1 className="h-20 bg-gradient-to-t from-[#9dabc1] to-white bg-clip-text text-center text-3xl font-semibold tracking-tight text-transparent shadow-lg xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
               Faceless Video Engine
             </h1>
+            <p className="text-2xl text-[#BCCFE2]">
+              {" "}
+              <span className="instrument-serif-regular-italic">
+                Automate
+              </span>{" "}
+              and{" "}
+              <span className="instrument-serif-regular-italic">dominate</span>{" "}
+              YouTube without ever showing your face!
+            </p>
           </div>
           <Input />
           <div className="wrapper flex-center relative flex h-[600px] flex-col">
@@ -64,7 +73,7 @@ export default function Home() {
                 transition={{ duration: 1.2 }}
                 src={youtube}
                 alt="youtube"
-                className="self-start w-12"
+                className="w-12 self-start"
               />
               <motion.img
                 ref={ref}
@@ -73,7 +82,7 @@ export default function Home() {
                 transition={{ duration: 2.2 }}
                 src={reels}
                 alt="youtube"
-                className="self-end w-12"
+                className="w-12 self-end"
               />
               <motion.img
                 ref={ref}
@@ -82,7 +91,7 @@ export default function Home() {
                 animate={controls}
                 src={ytshorts}
                 alt="youtube"
-                className="self-start w-12 ml-4 mt-4"
+                className="ml-4 mt-4 w-12 self-start"
               />
             </div>
           </div>

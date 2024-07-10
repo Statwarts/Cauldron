@@ -28,24 +28,21 @@ export default function Footer() {
                 <img
                   src={Instagram}
                   alt="Instagram"
-                  width={"32px"}
-                  className="drop-shadow-socialMedia"
+                  className="w-8"
                 />
               </Link>
               <Link to="https://github.com/Statwarts">
                 <img
                   src={Github}
                   alt="Github"
-                  width={"32px"}
-                  className="drop-shadow-socialMedia"
+                  className="w-8"
                 />
               </Link>
               <Link to="">
                 <img
                   src={Linkedin}
                   alt="Linkedin"
-                  width={"32px"}
-                  className="drop-shadow-socialMedia"
+                  className="w-8"
                 />
               </Link>
             </div>

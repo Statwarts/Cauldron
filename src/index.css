@@ -16,6 +16,7 @@ body {
   font-family: "UncutSans", sans-serif;
   margin: 0;
   padding: 0;
+  font-feature-settings: 'ss02' on;
 }
 
 .instrument-serif-regular {
@@ -48,12 +49,19 @@ body {
 
 .glow {
   box-shadow: inset 0 0 4px 0.8px rgba(59, 131, 246, 0.3),
-    0 0 6px 0.8px rgba(59, 131, 246, 0.2);
+    0 0 6px 0.8px rgba(59, 131, 246, 0.2),
+    0 0 6px 0.8px rgb(0, 0, 0);
 }
 
 .glow:hover {
   box-shadow: inset 0 0 4px 0.8px rgba(59, 131, 246, 0.35),
-    0 0 8px 1.2px rgba(59, 131, 246, 0.35);
+    0 0 8px 1.2px rgba(59, 131, 246, 0.25),
+    0 0 6px 0.8px rgb(0, 0, 0);
+}
+
+.inner-shadow {
+  background: linear-gradient(180deg, #12121266 0%, #0F101466 100%);
+  box-shadow: 0px 0px 15px hsl(202, 92%, 67%, 3%) inset;
 }
 
 ::selection {
@@ -114,9 +122,13 @@ body {
 svg {
   transition: mask-image 1s, -webkit-mask-image 1s;
 }
+
 .mask-image {
-  transition: mask-image 1s ease; /* Adjust duration and timing function as needed */
+  transition: mask-image 1s ease;
+  /* Adjust duration and timing function as needed */
 }
+
+
 
 @layer utilities {
   .wrapper {
