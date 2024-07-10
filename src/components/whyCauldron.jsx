@@ -70,7 +70,7 @@ export default function WhyCauldron() {
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {batchProcessingData.map(({ imgSrc, text }, index) => (
             <React.Fragment key={index}>
-              <div className="flex flex-col items-start justify-center gap-2 text-pretty rounded-3xl p-4 transition-all duration-300 hover:bg-[#121214b7] bg-[#1212143b]">
+              <div className="flex flex-col items-center justify-center gap-2 text-pretty rounded-3xl p-4 transition-all duration-300 hover:bg-[#121214b7] bg-[#1212143b]">
                 <motion.img
                   onHoverStart={() => {
                     const newHovering = [...isHovering];
