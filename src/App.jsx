@@ -7,11 +7,13 @@ import PrivacyPolicy from "./pages/legalStuff/privacyPolicyPage";
 import TermsofService from "./pages/legalStuff/TermsofService";
 import Nav from "./components/Nav/Nav";
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 function App() {
   return (
     <>
       <Analytics />
+      <SpeedInsights />
       <BrowserRouter>
         <Nav />
         <Routes>
