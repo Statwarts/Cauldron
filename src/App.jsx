@@ -6,10 +6,12 @@ import Register from "./pages/register/register";
 import PrivacyPolicy from "./pages/legalStuff/privacyPolicyPage";
 import TermsofService from "./pages/legalStuff/TermsofService";
 import Nav from "./components/Nav/Nav";
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   return (
     <>
+      <Analytics />
       <BrowserRouter>
         <Nav />
         <Routes>
