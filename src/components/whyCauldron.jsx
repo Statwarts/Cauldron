@@ -51,8 +51,8 @@ export default function WhyCauldron() {
   ];
 
   return (
-    <div className="bg-[rgb(11,11,14)] pl-6 pr-6 text-white">
-      <div className="m-auto max-w-[700px] pb-40 text-[#c1c9cf]">
+    <div className="bg-[rgb(11,11,14)] px-6 text-white">
+      <div className="m-auto max-w-[700px] pb-40  text-[#c1c9cf]">
         <h1 className="text-4xl font-semibold text-[#F1F7FC]">
           Reduced Production Costs
         </h1>

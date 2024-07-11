@@ -18,25 +18,25 @@ export default function Prompt() {
       number: 1,
       prompt:
         "The ability to create multiple videos in a short amount of time is particularly useful for creators who need to maintain a consistent posting schedule.",
-      src: "https://www.youtube.com/shorts/u_zjP8sjHlA",
+      src: "https://www.youtube.com/embed/5lhGkQ_0sp4",
     },
     {
       number: 2,
       prompt:
         "The ability to create multiple videos in a short amount of time is particularly useful for creators who need to maintain a consistent posting schedule.",
-      src: "https://www.youtube.com/shorts/PD6Ayhv-jqU",
+      src: "https://www.youtube.com/embed/PD6Ayhv-jqU",
     },
     {
       number: 3,
       prompt:
         "The ability to create multiple videos in a short amount of time is particularly useful for creators who need to maintain a consistent posting schedule.",
-      src: "https://www.youtube.com/shorts/96jj5K43HBQ",
+      src: "https://www.youtube.com/embed/96jj5K43HBQ",
     },
     {
       number: 4,
       prompt:
         "The ability to create multiple videos in a short amount of time is particularly useful for creators who need to maintain a consistent posting schedule.",
-      src: "https://www.youtube.com/shorts/OxOKbPeFv9o",
+      src: "https://www.youtube.com/embed/OxOKbPeFv9o",
     },
   ];
 
