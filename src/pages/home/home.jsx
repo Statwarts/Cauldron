@@ -42,18 +42,27 @@ export default function Home() {
             <h1 className="h-20 bg-gradient-to-t from-[#9dabc1] to-white bg-clip-text text-center text-3xl font-semibold tracking-tight text-transparent shadow-lg xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
               Faceless Video Engine
             </h1>
+            <p className="text-2xl text-[#BCCFE2]">
+              {" "}
+              <span className="instrument-serif-regular-italic">
+                Automate
+              </span>{" "}
+              and{" "}
+              <span className="instrument-serif-regular-italic">dominate</span>{" "}
+              YouTube without ever showing your face!
+            </p>
           </div>
           <Input />
           <div className="wrapper flex-center relative flex h-[600px] flex-col">
-            <div className="flex-center mt-40 rounded-[32px] border-2 border-[hsl(210,100%,60%)] bg-gradient-to-t from-[#0071E3] to-[hsl(210,100%,60%)] p-4">
-              <img src={Cauldron} alt="Cauldron" width={"120px"} />
+            <div className="flex-center mt-40 rounded-[32px] border-2 border-[hsl(210,100%,60%)] bg-gradient-to-t from-[#0071E3] to-[hsl(210,100%,60%)] p-5">
+              <img src={Cauldron} alt="Cauldron" width={"80px"} />
             </div>
             <div className="flex-center absolute bottom-[80%] right-[20%] md:right-[25%] lg:right-[32%]">
-              <img src={Sparkle} alt="Sparkle" />
+              <img src={Sparkle} alt="Sparkle" width={"20px"} />
               <p className="pl-1 text-[#E5F1FD]">Ideas</p>
             </div>
             <div className="flex-center absolute bottom-[90%] left-[15%] md:left-[20%] lg:left-[27%]">
-              <img src={OpenAi} alt="Sparkle" />
+              <img src={OpenAi} alt="Sparkle" width={"20px"} />
               <p className="pl-1 text-[#E5F1FD]">Prompt</p>
             </div>
             <div className="mb-10 mt-16 flex w-40 flex-col lg:mb-20">
@@ -64,7 +73,7 @@ export default function Home() {
                 transition={{ duration: 1.2 }}
                 src={youtube}
                 alt="youtube"
-                className="self-start"
+                className="w-12 self-start"
               />
               <motion.img
                 ref={ref}
@@ -73,7 +82,7 @@ export default function Home() {
                 transition={{ duration: 2.2 }}
                 src={reels}
                 alt="youtube"
-                className="self-end"
+                className="w-12 self-end"
               />
               <motion.img
                 ref={ref}
@@ -82,7 +91,7 @@ export default function Home() {
                 animate={controls}
                 src={ytshorts}
                 alt="youtube"
-                className="self-start"
+                className="ml-4 mt-4 w-12 self-start"
               />
             </div>
           </div>
