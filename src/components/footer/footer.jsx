@@ -28,21 +28,21 @@ export default function Footer() {
                 <img
                   src={Instagram}
                   alt="Instagram"
-                  className="w-8"
-                />
-              </Link>
-              <Link to="https://github.com/Statwarts">
-                <img
-                  src={Github}
-                  alt="Github"
-                  className="w-8"
+                  className="w-8 opacity-80 transition-all hover:opacity-100"
                 />
               </Link>
               <Link to="">
                 <img
                   src={Linkedin}
                   alt="Linkedin"
-                  className="w-8"
+                  className="w-8 opacity-80 transition-all hover:opacity-100"
+                />
+              </Link>
+              <Link to="https://github.com/Statwarts">
+                <img
+                  src={Github}
+                  alt="Github"
+                  className="w-8 opacity-80 transition-all hover:opacity-100"
                 />
               </Link>
             </div>

@@ -3,13 +3,14 @@ import { useEffect, useState } from "react";
 import store from "../../../store";
 import "../../../Firebase/firebaseConfig";
 import Notification from "../../components/notification/notification";
-import { Cauldron } from "../../assets/image";
 import Nav from "../../components/Nav/Nav";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import Confetti from "react-confetti";
 import Modal from "../../components/modal";
 import Loader from "./Loader";
+import { Discord, Github, X, Cauldron } from "../../assets/image";
+import { Link } from "react-router-dom";
 
 export default function Register() {
   const [name, setName] = useState("");
@@ -156,24 +157,46 @@ export default function Register() {
               text="Don't keep it blank atleast write a joke ;)"
               textColor="#e3e7eac3"
             />
+          </>
+        )}
 
-            {showSuccess && !isLoading && (
-              <>
-                <Confetti
-                  width={window.innerWidth}
-                  height={window.innerHeight}
-                  numberOfPieces={50}
-                  friction={1.0}
-                />
-                <p className="max-w-md pl-10 pr-10 text-center text-xl text-[rgb(188,207,226)] lg:text-2xl">
-                  You have{" "}
-                  <span className="instrument-serif-regular-italic">
-                    Successfully
-                  </span>{" "}
-                  Registered!
-                </p>
-              </>
-            )}
+        {showSuccess && !isLoading && (
+          <>
+            <Confetti
+              width={window.innerWidth}
+              height={window.innerHeight}
+              numberOfPieces={20}
+              friction={1.0}
+            />
+            <div className="flex flex-col items-center gap-12">
+              <p className="max-w-lg text-center text-xl text-[#bccfe2] lg:text-2xl">
+                You have{" "}
+                <span className="instrument-serif-regular-italic">
+                  successfully
+                </span>{" "}
+                registered! We will notify you when Cauldron is ready for you!
+              </p>
+              <p className="text-md max-w-md text-center font-[400] text-[#b8c1c7cc]">
+                In the meantime, you can join our Discord and follow us on X for
+                more updates.
+              </p>
+              <div className="m-auto flex items-center gap-5 md:m-0">
+                <Link to="">
+                  <img
+                    src={Discord}
+                    alt="Instagram"
+                    className="w-8 opacity-80 transition-all hover:opacity-100"
+                  />
+                </Link>
+                <Link to="">
+                  <img
+                    src={X}
+                    alt="Linkedin"
+                    className="w-8 opacity-80 transition-all hover:opacity-100"
+                  />
+                </Link>
+              </div>
+            </div>
           </>
         )}
       </div>

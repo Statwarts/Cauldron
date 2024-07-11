@@ -13,6 +13,8 @@ import youtube from "./svg/youtube.svg";
 import reels from "./svg/reels.svg";
 import ytshorts from "./svg/ytshorts.svg";
 import Instagram from "./svg/instagram.svg";
+import Discord from "./svg/Discord.svg";
+import X from "./svg/X.svg";
 import Github from "./svg/github.svg";
 import Linkedin from "./svg/linkedin.svg";
 import whyIcon1 from "./svg/whyIcon1.svg";
@@ -29,6 +31,8 @@ export  {
     youtube,
     reels,
     ytshorts,
+    Discord,
+    X,
     Instagram,
     Github,
     Linkedin,
