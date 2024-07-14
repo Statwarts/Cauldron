@@ -22,7 +22,6 @@ export default function Register() {
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async () => {
-    setIsLoading(true);
     if (!email) {
       setShowNotification(2);
       return;
@@ -31,7 +30,7 @@ export default function Register() {
       setShowNotification(1);
       return;
     }
-
+    setIsLoading(true);
     const success = await register(email, name, phone, whyUse);
     if (success) {
       setShowSuccess(true);
