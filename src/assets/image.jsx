@@ -22,7 +22,10 @@ import whyIcon2 from "./svg/whyIcon2.svg";
 import whyIcon3 from "./svg/whyIcon3.svg";
 import Bg from "./svg/Bg.svg";
 import Send from "./svg/send.svg";
-
+import Cam from "./images/Cam.png";
+import Mic from "./images/Mic.png";
+import Wallet from "./images/Wallet.png";
+import Comment from "./images/Comment.png";
 
 export  {
     Cauldron,
@@ -40,5 +43,9 @@ export  {
     whyIcon2,
     whyIcon3,
     Bg,
-    Send
+    Send,
+    Cam,
+    Mic,
+    Wallet,
+    Comment
 }
