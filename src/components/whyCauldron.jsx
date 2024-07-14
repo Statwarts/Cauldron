@@ -13,7 +13,7 @@ export default function WhyCauldron() {
   const data = [
     {
       text: "Faceless videos allow for a consistent visual style and branding that isn’t reliant on the creator’s appearance, which can be more scalable in the long term.",
-      src: "/assets/images/Cam.png",
+      src: "/src/assets/images/Cam.png",
       name: "Cam",
       bg: "/src/assets/images/Bg1.png",
     },
