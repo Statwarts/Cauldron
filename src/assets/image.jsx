@@ -21,6 +21,10 @@ import whyIcon1 from "./svg/whyIcon1.svg";
 import whyIcon2 from "./svg/whyIcon2.svg";
 import whyIcon3 from "./svg/whyIcon3.svg";
 import Bg from "./svg/Bg.svg";
+import Bg1 from "./images/Bg1.png";
+import Bg2 from "./images/Bg2.png";
+import Bg3 from "./images/bg3.png";
+import Bg4 from "./images/Bg4.png";
 import Send from "./svg/send.svg";
 import Cam from "./images/Cam.png";
 import Mic from "./images/Mic.png";
@@ -47,5 +51,9 @@ export  {
     Cam,
     Mic,
     Wallet,
-    Comment
+    Comment,
+    Bg1,
+    Bg2,
+    Bg3,
+    Bg4
 }
