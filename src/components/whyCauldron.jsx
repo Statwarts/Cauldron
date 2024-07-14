@@ -14,25 +14,25 @@ export default function WhyCauldron() {
       text: "Faceless videos allow for a consistent visual style and branding that isn’t reliant on the creator’s appearance, which can be more scalable in the long term.",
       src: "../src/assets/images/Cam.png",
       name: "Cam",
-      bg: "../src/assets/images/Bg1.png",
+      bg: "/assets/images/Bg1.png",
     },
     {
       text: "Change voices and choose voices that best match their brand or the tone of the content.",
       src: "../src/assets/images/Mic.png",
       name: "Mic",
-      bg: "../src/assets/images/Bg2.png",
+      bg: "/assets/images/Bg2.png",
     },
     {
       text: "Significantly reduce expenses related to hiring videographers and editors.",
       src: "../src/assets/images/Wallet.png",
       name: "Wallet",
-      bg: "../src/assets/images/Bg3.png",
+      bg: "/assets/images/Bg3.png",
     },
     {
       text: "Customizable subtitles ensure that videos are accessible to a broader audience, including those who are deaf or hard of hearing, and can enhance viewer engagement.",
       src: "../src/assets/images/Comment.png",
       name: "Comment",
-      bg: "../src/assets/images/Bg4.png",
+      bg: "/assets/images/Bg4.png",
     },
   ];
   const batchProcessingData = [
