@@ -89,10 +89,10 @@ export default function WhyCauldron() {
       </div>
 
       <div className="m-auto max-w-[960px] items-center pb-40 text-[rgb(193,201,207)]">
-        <h1 className="pl-5 text-4xl font-semibold lg:pl-0">
+        <h1 className=" text-4xl font-semibold lg:pl-0">
           Batch Processing
         </h1>
-        <p className="mb-20 max-w-3xl pl-5 lg:max-w-[900px] lg:pl-0">
+        <p className="mb-20 max-w-3xl  lg:max-w-[900px] lg:pl-0">
           The ability to create multiple videos in a short amount of time is
           particularly useful for creators who need to maintain a consistent
           posting schedule.
