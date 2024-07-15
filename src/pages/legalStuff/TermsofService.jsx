@@ -6,11 +6,11 @@ export default function TermsOfService() {
   }, []);
 
   return (
-    <div className="h-full text-balance bg-gradient-to-t from-[rgb(11,12,15)] to-[#0F1014] p-5 text-[#E5F1FD]">
+    <div className="h-full text-balance bg-gradient-to-t from-[rgb(11,12,15)] to-[#0F1014] p-8 text-[#E5F1FD]">
       <div className="bg-gradient-to-t from-[#9dabc1] to-blue-200 bg-clip-text pb-10 pt-10 text-center text-5xl font-semibold text-transparent">
         <strong>Terms and Conditions</strong>
       </div>
-      <div className="m-auto flex max-w-5xl flex-col justify-center gap-2">
+      <div className="m-auto flex max-w-5xl flex-col justify-center gap-2 text-pretty">
         <p>Welcome to Cauldron!</p>
 
         <p>

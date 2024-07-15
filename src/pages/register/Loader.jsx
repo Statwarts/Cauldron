@@ -9,7 +9,7 @@ const Loader = () => {
       videoRef.current.playbackRate = 1.5;
     }
     const loadVideo = async () => {
-      const videoModule = await import("../src/assets/Videos/Loader.mp4");
+      const videoModule = await import("../../assets/Videos/Loader.mp4");
       setVideoSrc(videoModule.default);
     };
 

@@ -43,8 +43,10 @@ async function register(email, name, phone, whyUse) {
   try {
     const docRef = await addDoc(collection(db, "users"), userData);
     console.log("Document written with ID: ", docRef.id);
+    return true;
   } catch (e) {
     console.error("Error adding document: ", e);
+    return false;
   }
 }
 

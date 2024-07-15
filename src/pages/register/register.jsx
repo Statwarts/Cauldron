@@ -1,13 +1,9 @@
 import register from "../../../Firebase/firestore";
 import { useEffect, useState } from "react";
-import store from "../../../store";
 import "../../../Firebase/firebaseConfig";
 import Notification from "../../components/notification/notification";
-import Nav from "../../components/Nav/Nav";
-import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import Confetti from "react-confetti";
-import Modal from "../../components/modal";
 import Loader from "./Loader";
 import { Discord, Github, X, Cauldron } from "../../assets/image";
 import { Link } from "react-router-dom";
