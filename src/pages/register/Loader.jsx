@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from "react";
+import LoadingVideo from "../../assets/Videos/Loader.mp4";
 const Loader = () => {
   const videoRef = useRef(null);
 
@@ -18,7 +19,7 @@ const Loader = () => {
         <video
           ref={videoRef}
           style={maskstyle}
-          src="../src/assets/videos/Loader.mp4"
+          src={LoadingVideo}
           width={300}
           autoPlay
           loop
