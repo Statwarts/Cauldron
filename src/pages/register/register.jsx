@@ -16,6 +16,7 @@ export default function Register() {
   const [showNotification, setShowNotification] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [isDublicate, setIsDublicate] = useState(false);
 
   const handleSubmit = async () => {
     if (!email) {
@@ -27,22 +28,30 @@ export default function Register() {
       return;
     }
     setIsLoading(true);
-    const success = await register(email, name, phone, whyUse);
-    if (success) {
+    const result = await register(email, name, phone, whyUse);
+    if (result === true) {
+      setShowSuccess(true);
+      setIsLoading(false);
+    } else if (result === 0) {
+      setIsDublicate(true);
       setShowSuccess(true);
       setIsLoading(false);
     }
   };
 
-  useEffect(()=>{
-    if(!isLoading){
+  useEffect(() => {
+    if (!isLoading) {
       console.log("loading is false");
     }
 
-    if(isLoading){
+    if (isLoading) {
       console.log("loading is true");
     }
-  },[isLoading])
+  }, [isLoading]);
+
+  useEffect(() => {
+    console.log("Dublicate: ", isDublicate);
+  }, [isDublicate]);
 
   useEffect(() => {
     if (showNotification) {
@@ -54,7 +63,6 @@ export default function Register() {
 
   return (
     <>
-      {/* <Nav /> */}
       <div className="flex h-full min-h-screen flex-col items-center justify-start bg-[#0c0b0e] pt-[70px]">
         {isLoading && (
           <div className="pt-32">
@@ -98,37 +106,6 @@ export default function Register() {
                   className="w-[400px] rounded-full border border-[#232527] bg-[#121314b7] p-2 px-4 font-[300] text-[#e3e7eac3] outline-none placeholder:text-[#e3e7ea73] focus:border-[#2f3134] xs:w-[300px] md:w-[500px] xl:w-[600px]"
                   onChange={(e) => setName(e.target.value)}
                 />
-                {/* <h4 className="pl-2 pt-2 font-[300] text-[#e3e7eac3]">
-              Enter your phone number (Optional)
-            </h4>
-            <PhoneInput
-              country={"in"}
-              value={phone}
-              onChange={setPhone}
-              placeholder="Phone Number (Optional)"
-              inputStyle={{
-                width: "100%",
-                borderRadius: "50px",
-                border: "1px solid #232527",
-                backgroundColor: "#121314b7",
-                color: "#e3e7eac3",
-                outline: "none",
-              }}
-              dropdownStyle={{
-                borderRadius: "8px",
-                border: "1px solid #232527",
-                backgroundColor: "#111213",
-                color: "#e3e7eac3",
-              }}
-              buttonStyle={{
-                backgroundColor: "#121314b7",
-                border: "none",
-              }}
-              containerClass="phone-input-container"
-              inputClass="phone-input"
-              buttonClass="phone-input-button"
-              dropdownClass="phone-input-dropdown"
-            /> */}
                 <h4 className="pl-2 pt-2 font-[300] text-[#e3e7eac3]">
                   Why do you want to use Cauldron?
                 </h4>
@@ -159,7 +136,7 @@ export default function Register() {
             />
             <Notification
               isModalVisible={showNotification === 3}
-              text="Don't keep it blank atleast write a joke ;)"
+              text="Don't keep it blank at least write a joke ;)"
               textColor="#e3e7eac3"
             />
           </>
@@ -167,20 +144,33 @@ export default function Register() {
 
         {showSuccess && !isLoading && (
           <>
-            <Confetti
-              width={window.innerWidth}
-              height={window.innerHeight}
-              numberOfPieces={20}
-              friction={1.0}
-            />
+            {!isDublicate && (
+              <Confetti
+                width={window.innerWidth}
+                height={window.innerHeight}
+                numberOfPieces={20}
+                friction={1.0}
+              />
+            )}
             <div className="flex flex-col items-center gap-12">
-              <p className="max-w-lg text-center text-xl text-[#bccfe2] lg:text-2xl">
-                You have{" "}
-                <span className="instrument-serif-regular-italic">
-                  successfully
-                </span>{" "}
-                registered! We will notify you when Cauldron is ready for you!
-              </p>
+              {!isDublicate && (
+                <p className="max-w-lg text-center text-xl text-[#bccfe2] lg:text-2xl">
+                  You have{" "}
+                  <span className="instrument-serif-regular-italic">
+                    successfully
+                  </span>{" "}
+                  registered! We will notify you when Cauldron is ready for you!
+                </p>
+              )}
+              {isDublicate && (
+                <p className="max-w-lg text-center text-xl text-[#bccfe2] lg:text-2xl">
+                  You have{" "}
+                  <span className="instrument-serif-regular-italic">
+                    already
+                  </span>{" "}
+                  registered! We will notify you when Cauldron is ready for you!
+                </p>
+              )}
               <p className="text-md max-w-md text-center font-[400] text-[#b8c1c7cc]">
                 In the meantime, you can join our Discord and follow us on X for
                 more updates.

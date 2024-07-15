@@ -24,7 +24,7 @@ async function register(email, name, phone, whyUse) {
   const isUniqueUserCheck = await isUniqueUser(email);
   if (!isUniqueUserCheck) {
     console.log("User already exists");
-    return -1;
+    return 0;
   }
 
   const userData = {
