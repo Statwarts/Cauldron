@@ -1,6 +1,7 @@
 import { whyIcon1, whyIcon2, whyIcon3 } from "../assets/image";
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { Cam , Wallet , Mic , Comment , Bg1 , Bg2 , Bg3 , Bg4 } from "../assets/image";
 export default function WhyCauldron() {
   const [isHovering, setIsHovering] = useState([false, false, false]);
   const numOfLines = (text) => {
@@ -12,27 +13,27 @@ export default function WhyCauldron() {
   const data = [
     {
       text: "Faceless videos allow for a consistent visual style and branding that isn’t reliant on the creator’s appearance, which can be more scalable in the long term.",
-      src: "../src/assets/images/Cam.png",
+      src: Cam,
       name: "Cam",
-      bg: "../src/assets/images/Bg1.png",
+      bg: Bg1
     },
     {
       text: "Change voices and choose voices that best match their brand or the tone of the content.",
-      src: "../src/assets/images/Mic.png",
-      name: "Mic",
-      bg: "../src/assets/images/Bg2.png",
+      src: Mic,
+       name: "Mic",
+      bg: Bg2
     },
     {
       text: "Significantly reduce expenses related to hiring videographers and editors.",
-      src: "../src/assets/images/Wallet.png",
+      src: Wallet,
       name: "Wallet",
-      bg: "../src/assets/images/Bg3.png",
+      bg: Bg3
     },
     {
       text: "Customizable subtitles ensure that videos are accessible to a broader audience, including those who are deaf or hard of hearing, and can enhance viewer engagement.",
-      src: "../src/assets/images/Comment.png",
+      src: Comment,
       name: "Comment",
-      bg: "../src/assets/images/Bg4.png",
+      bg: Bg4
     },
   ];
   const batchProcessingData = [
