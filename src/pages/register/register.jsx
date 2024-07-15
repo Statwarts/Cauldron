@@ -38,6 +38,16 @@ export default function Register() {
     }
   };
 
+  useEffect(()=>{
+    if(!isLoading){
+      console.log("loading is false");
+    }
+
+    if(isLoading){
+      console.log("loading is true");
+    }
+  },[isLoading])
+
   useEffect(() => {
     if (showNotification) {
       setTimeout(() => {
