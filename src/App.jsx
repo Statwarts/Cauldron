@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route,Navigate } from "react-router-dom";
 import Home from "./pages/home/home";
 import DashboardRoute from "./pages/dashboard/dashboardRoute";
 import Pricing from "./pages/pricing/pricing";
@@ -24,6 +24,7 @@ function App() {
           <Route path="/Register" element={<Register />} />
           <Route path="termsofservice" element={<TermsofService />} />
           <Route path="privacypolicy" element={<PrivacyPolicy />} />
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </BrowserRouter>
     </>

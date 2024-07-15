@@ -6,7 +6,7 @@ export default function PrivacyPolicy() {
   }, []);
 
   return (
-    <div className="h-full text-balance bg-gradient-to-t from-[rgb(11,12,15)] to-[#0F1014] p-5 text-[#E5F1FD]">
+    <div className="h-full text-balance bg-gradient-to-t from-[rgb(11,12,15)] to-[#0F1014] p-8 text-[#E5F1FD]">
       <div className="bg-gradient-to-t from-[#9dabc1] to-blue-200 bg-clip-text pb-10 pt-10 text-center text-5xl font-semibold text-transparent">
         <h1>Privacy Policy for Cauldron</h1>
       </div>
