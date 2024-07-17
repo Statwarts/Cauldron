@@ -110,6 +110,7 @@ export default function Register() {
     `,
         }),
       });
+      console.log(response);
       setShowSuccess(true);
       setIsLoading(false);
     } else if (result === 0) {
