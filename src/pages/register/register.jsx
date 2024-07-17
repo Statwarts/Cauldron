@@ -30,6 +30,86 @@ export default function Register() {
     setIsLoading(true);
     const result = await register(email, name, phone, whyUse);
     if (result === true) {
+      const response = await fetch("https://api.brevo.com/v3/smtp/email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "api-key": import.meta.env.VITE_EMAIL_API_KEY,
+        },
+        body: JSON.stringify({
+          sender: {
+            name: "Cauldron",
+            email: "support@cauldron.live",
+          },
+          to: [
+            {
+              email: email,
+              name: name,
+            },
+          ],
+          subject: "Welcome to Cauldron!",
+          htmlContent:
+            `
+      <html>
+      <head>
+        <style>
+          body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+          }
+          .container {
+            width: 100%;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin: 20px auto;
+            max-width: 600px;
+          }
+          .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+          }
+          .content {
+            padding: 20px;
+            color: #333333;
+          }
+          .footer {
+            text-align: center;
+            padding: 10px;
+            color: #777777;
+            font-size: 12px;
+          }
+        </style>
+      </head>
+      <body>
+        <div class="container">
+          <div class="header">
+            <h1>Welcome to Cauldron!</h1>
+          </div>
+          <div class="content">
+            <p>Hello ${name},</p>
+            <p>Thank you for registering at Cauldron. We're excited to have you on board!</p>
+            <p>We will notify you as soon as Cauldron is ready for you.</p>
+            <p>If you have any questions, feel free to reach out to our support team at any time.</p>
+            <p>Best regards,</p>
+            <p>The Cauldron Team</p>
+          </div>
+          <div class="footer">
+            <p>&copy; 2024 Cauldron. All rights reserved.</p>
+          </div>
+        </div>
+      </body>
+      </html>
+    `,
+        }),
+      });
       setShowSuccess(true);
       setIsLoading(false);
     } else if (result === 0) {
