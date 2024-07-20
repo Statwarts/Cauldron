@@ -1,28 +1,28 @@
 import React from "react";
 
-const Mail = ({ name }) => {
+const Mail = (name) => {
   return (
-    <div className="wrap">
+    `<div className="wrap">
       <h1 className="header">Welcome to Cauldron!</h1>
       <br />
       <div className="content">
-        <p className="paragraph">Hello {name},</p>
+        <p className="paragraph">Hello ${name},</p>
         <p className="paragraph">
           Thank you for your interest in being one of Cauldron's first users. We
           truly appreciate your support!
         </p>
         <p className="paragraph">
-          We've been working diligently on{" "}
+          We've been working diligently on 
           <a className="link" href="https://cauldron.live">
-            Cauldron.live
+            cauldron.live
           </a>
           , since May 2024, and we're excited to announce that it will be
           released in August. Stay tuned for an incredible experience!
         </p>
         <p className="paragraph">
-          To get the latest updates, follow us on Twitter:{" "}
+          To get the latest updates, follow us on Twitter: 
           <a className="link" href="https://x.com/cauldron_live">
-            @cauldron_live
+             @cauldron_live
           </a>
         </p>
         <p className="paragraph">
@@ -41,7 +41,7 @@ const Mail = ({ name }) => {
       <div className="footer">
         <p className="footer-text">&copy; 2024 Cauldron.</p>
       </div>
-      <style jsx>{`
+      <style jsx>{
         @media (min-width: 1280px) {
           .wrap {
             padding-left: 0px;
@@ -91,8 +91,8 @@ const Mail = ({ name }) => {
           font-size: 0.875rem;
           color: #515151;
         }
-      `}</style>
-    </div>
+      }</style>
+    </div>`
   );
 };
 

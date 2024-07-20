@@ -7,7 +7,7 @@ import Confetti from "react-confetti";
 import Loader from "./Loader";
 import { Discord, Github, X, Cauldron } from "../../assets/image";
 import { Link } from "react-router-dom";
-import Mail from "./mail";
+import Mail from "../../components/mail";
 
 export default function Register() {
   const [name, setName] = useState("");
@@ -49,7 +49,8 @@ export default function Register() {
             },
           ],
           subject: "You're in waitlist!",
-          htmlContent: <Mail name={name} />,
+          htmlContent: Mail(name),
+          
         }),
       });
       console.log(response);
@@ -217,7 +218,6 @@ export default function Register() {
             </div>
           </>
         )}
-        <Mail />
       </div>
     </>
   );
