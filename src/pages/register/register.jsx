@@ -217,6 +217,7 @@ export default function Register() {
             </div>
           </>
         )}
+        <Mail />
       </div>
     </>
   );
