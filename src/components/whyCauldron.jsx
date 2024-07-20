@@ -1,7 +1,7 @@
 import { whyIcon1, whyIcon2, whyIcon3 } from "../assets/image";
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Cam , Wallet , Mic , Comment , Bg1 , Bg2 , Bg3 , Bg4 } from "../assets/image";
+import { Cam, Wallet, Mic, Comment, Bg1, Bg2, Bg3, Bg4 } from "../assets/image";
 export default function WhyCauldron() {
   const [isHovering, setIsHovering] = useState([false, false, false]);
   const numOfLines = (text) => {
@@ -15,25 +15,25 @@ export default function WhyCauldron() {
       text: "Faceless videos allow for a consistent visual style and branding that isn’t reliant on the creator’s appearance, which can be more scalable in the long term.",
       src: Cam,
       name: "Cam",
-      bg: Bg1
+      bg: Bg1,
     },
     {
       text: "Change voices and choose voices that best match their brand or the tone of the content.",
       src: Mic,
-       name: "Mic",
-      bg: Bg2
+      name: "Mic",
+      bg: Bg2,
     },
     {
       text: "Significantly reduce expenses related to hiring videographers and editors.",
       src: Wallet,
       name: "Wallet",
-      bg: Bg3
+      bg: Bg3,
     },
     {
       text: "Customizable subtitles ensure that videos are accessible to a broader audience, including those who are deaf or hard of hearing, and can enhance viewer engagement.",
       src: Comment,
       name: "Comment",
-      bg: Bg4
+      bg: Bg4,
     },
   ];
   const batchProcessingData = [
@@ -53,7 +53,7 @@ export default function WhyCauldron() {
 
   return (
     <div className="bg-[rgb(11,11,14)] px-6 text-white">
-      <div className="m-auto max-w-[700px] pb-40  text-[#c1c9cf]">
+      <div className="m-auto max-w-[700px] pb-40 text-[#c1c9cf]">
         <h1 className="text-4xl font-semibold text-[#F1F7FC]">
           Reduced Production Costs
         </h1>
@@ -89,10 +89,8 @@ export default function WhyCauldron() {
       </div>
 
       <div className="m-auto max-w-[960px] items-center pb-40 text-[rgb(193,201,207)]">
-        <h1 className=" text-4xl font-semibold lg:pl-0">
-          Batch Processing
-        </h1>
-        <p className="mb-20 max-w-3xl  lg:max-w-[900px] lg:pl-0">
+        <h1 className="text-4xl font-semibold lg:pl-0">Batch Processing</h1>
+        <p className="mb-20 max-w-3xl lg:max-w-[900px] lg:pl-0">
           The ability to create multiple videos in a short amount of time is
           particularly useful for creators who need to maintain a consistent
           posting schedule.
@@ -114,6 +112,7 @@ export default function WhyCauldron() {
                   }}
                   src={imgSrc}
                   alt="icon"
+                  draggable="false"
                   className="m-auto w-[96px]"
                   animate={
                     isHovering[index]
