@@ -73,17 +73,22 @@ export default function WhyCauldron() {
         <div className="flex flex-wrap justify-center text-[rgb(184,193,199,0.8)] sm:justify-between">
           {data.map(({ text, src, name, bg }, index) => (
             <React.Fragment key={index}>
-              <div className={"mb-4 text-pretty" + numOfLines(text)}>
-                <div className="inner-shadow relative flex flex-col items-center justify-center gap-0 overflow-hidden rounded-2xl border border-[#0b2f5649] p-2">
+              <div
+                className={
+                  "relative mb-4 overflow-hidden text-pretty" + numOfLines(text)
+                }
+              >
+                <div className="absolute -top-[30%] opacity-40 left-1/2 -z-0 h-[175px] w-[175px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#0071E3]"></div>
+                <div className="inner-shadow relative flex flex-col items-center justify-center gap-0 overflow-hidden rounded-2xl border border-[#0b2f5649] bg-[#00000012] p-2 shadow-lg backdrop-blur-[80px]">
                   <div className="flex">
-                    <div className="absolute -top-1/2 left-1/2 z-0 h-[175px] w-[175px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#0071E3] blur-[80px]"></div>
-                    <div className="h-[120px] z-30">
+                    {/* <div className="absolute -top-1/2 left-1/2 z-0 h-[175px] w-[175px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#0071E3] opacity-70 blur-[80px]"></div> */}
+                    <div className="z-30 h-[120px]">
                       <img
                         src={src}
                         alt
                         name="icon"
                         draggable="false"
-                        className="absolute left-1/2 top-[30%] -translate-x-1/2 -translate-y-1/2"
+                        className="absolute left-1/2 top-[30%] -translate-x-1/2 -translate-y-1/2 select-none"
                       />
                     </div>
                     <img
@@ -128,7 +133,7 @@ export default function WhyCauldron() {
                   src={imgSrc}
                   alt="icon"
                   draggable="false"
-                  className="m-auto w-[96px]"
+                  className="m-auto w-[96px] select-none"
                   animate={
                     isHovering[index]
                       ? {

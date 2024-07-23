@@ -60,8 +60,8 @@ body {
 }
 
 .inner-shadow {
-  background: linear-gradient(180deg, #12121266 0%, #0F101466 100%);
-  box-shadow: 0px 0px 15px #5dc0f814 inset;
+  /* background: linear-gradient(180deg, #12121266 0%, #0F101466 100%); */
+  box-shadow: 0px 0px 15px #5dbff80f inset;
 }
 
 ::selection {
