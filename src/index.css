@@ -61,7 +61,7 @@ body {
 
 .inner-shadow {
   background: linear-gradient(180deg, #12121266 0%, #0F101466 100%);
-  box-shadow: 0px 0px 15px hsl(202, 92%, 67%, 3%) inset;
+  box-shadow: 0px 0px 15px #5dc0f814 inset;
 }
 
 ::selection {

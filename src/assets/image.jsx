@@ -26,10 +26,10 @@ import Bg2 from "./images/Bg2.png";
 import Bg3 from "./images/bg3.png";
 import Bg4 from "./images/Bg4.png";
 import Send from "./svg/send.svg";
-import Cam from "./images/Cam.png";
-import Mic from "./images/Mic.png";
-import Wallet from "./images/Wallet.png";
-import Comment from "./images/Comment.png";
+import Faceless from "./svg/Faceless.svg";
+import Mic from "./svg/Mic.svg";
+import Wallet from "./svg/Wallet.svg";
+import Customize from "./svg/Customize.svg";
 
 export  {
     Cauldron,
@@ -48,10 +48,10 @@ export  {
     whyIcon3,
     Bg,
     Send,
-    Cam,
+    Faceless,
     Mic,
     Wallet,
-    Comment,
+    Customize,
     Bg1,
     Bg2,
     Bg3,

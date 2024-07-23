@@ -1,0 +1,56 @@
+<svg width="68" height="80" viewBox="0 0 68 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g filter="url(#filter0_d_308_982)">
+        <path
+            d="M34 45.3333C39.8933 45.3333 44.6667 40.56 44.6667 34.6667V20C44.6667 14.1067 39.8933 9.33334 34 9.33334C28.1067 9.33334 23.3333 14.1067 23.3333 20V34.6667C23.3333 40.56 28.1067 45.3333 34 45.3333Z"
+            stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path opacity="0.4" d="M30.2933 21.1467C32.6933 20.2667 35.3067 20.2667 37.7067 21.1467"
+            stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path opacity="0.4" d="M31.8667 26.8C33.28 26.4267 34.7467 26.4267 36.16 26.8"
+            stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        <g opacity="0.4">
+            <path
+                d="M13.599 29.7344V34.2677C13.599 45.521 22.7456 54.6677 33.999 54.6677C45.2523 54.6677 54.399 45.521 54.399 34.2677V29.7344"
+                stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M34 54.6667V62.6667" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </g>
+    </g>
+    <g style="mix-blend-mode:plus-lighter" opacity="0.4" filter="url(#filter1_f_308_982)">
+        <path
+            d="M34 45.3333C39.8933 45.3333 44.6667 40.56 44.6667 34.6667V20C44.6667 14.1067 39.8933 9.33334 34 9.33334C28.1067 9.33334 23.3333 14.1067 23.3333 20V34.6667C23.3333 40.56 28.1067 45.3333 34 45.3333Z"
+            stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path opacity="0.4" d="M30.2933 21.1467C32.6933 20.2667 35.3067 20.2667 37.7067 21.1467"
+            stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path opacity="0.4" d="M31.8667 26.8C33.28 26.4267 34.7467 26.4267 36.16 26.8"
+            stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        <g opacity="0.4">
+            <path
+                d="M13.599 29.7344V34.2677C13.599 45.521 22.7456 54.6677 33.999 54.6677C45.2523 54.6677 54.399 45.521 54.399 34.2677V29.7344"
+                stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M34 54.6667V62.6667" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </g>
+    </g>
+    <defs>
+        <filter id="filter0_d_308_982" x="-10" y="-4" width="88" height="88"
+            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feColorMatrix in="SourceAlpha" type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+            <feOffset dy="4" />
+            <feGaussianBlur stdDeviation="6" />
+            <feComposite in2="hardAlpha" operator="out" />
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0" />
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_308_982" />
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_308_982"
+                result="shape" />
+        </filter>
+        <filter id="filter1_f_308_982" x="-3" y="-1" width="74" height="74"
+            filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+            <feGaussianBlur stdDeviation="2.5" result="effect1_foregroundBlur_308_982" />
+        </filter>
+    </defs>
+</svg>
+    

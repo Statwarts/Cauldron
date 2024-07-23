@@ -1,7 +1,16 @@
 import { whyIcon1, whyIcon2, whyIcon3 } from "../assets/image";
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Cam, Wallet, Mic, Comment, Bg1, Bg2, Bg3, Bg4 } from "../assets/image";
+import {
+  Faceless,
+  Mic,
+  Wallet,
+  Customize,
+  Bg1,
+  Bg2,
+  Bg3,
+  Bg4,
+} from "../assets/image";
 export default function WhyCauldron() {
   const [isHovering, setIsHovering] = useState([false, false, false]);
   const numOfLines = (text) => {
@@ -13,8 +22,8 @@ export default function WhyCauldron() {
   const data = [
     {
       text: "Faceless videos allow for a consistent visual style and branding that isn’t reliant on the creator’s appearance, which can be more scalable.",
-      src: Cam,
-      name: "Cam",
+      src: Faceless,
+      name: "Faceless",
       bg: Bg1,
     },
     {
@@ -31,7 +40,7 @@ export default function WhyCauldron() {
     },
     {
       text: "Customizable subtitles ensure that videos are accessible to a broader audience, including those who are deaf .",
-      src: Comment,
+      src: Customize,
       name: "Comment",
       bg: Bg4,
     },
@@ -65,9 +74,18 @@ export default function WhyCauldron() {
           {data.map(({ text, src, name, bg }, index) => (
             <React.Fragment key={index}>
               <div className={"mb-4 text-pretty" + numOfLines(text)}>
-                <div className="inner-shadow h- relative flex flex-col items-center justify-center gap-0 overflow-hidden rounded-2xl border border-[#2A2A2A66] p-2">
-                  <div className="flex bg-red-500">
-                    <div className="h-[160px] bg-orange-700"></div>
+                <div className="inner-shadow relative flex flex-col items-center justify-center gap-0 overflow-hidden rounded-2xl border border-[#0b2f5649] p-2">
+                  <div className="flex">
+                    <div className="absolute -top-1/2 left-1/2 z-0 h-[175px] w-[175px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#0071E3] blur-[80px]"></div>
+                    <div className="h-[120px] z-30">
+                      <img
+                        src={src}
+                        alt
+                        name="icon"
+                        draggable="false"
+                        className="absolute left-1/2 top-[30%] -translate-x-1/2 -translate-y-1/2"
+                      />
+                    </div>
                     <img
                       className="absolute left-1/2 top-1/4 z-0 -translate-x-1/2 -translate-y-1/2 scale-[45%] select-none"
                       src={bg}
