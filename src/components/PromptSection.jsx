@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from "react";
 import PromptCard from "./PromptCard";
 import Marquee from "react-fast-marquee";
 
-export default function Prompt() {
+export default function PromptSection() {
   const scrollContainer = useRef(null);
 
   const handleMouseEnter = () => {
@@ -41,29 +41,32 @@ export default function Prompt() {
   ];
 
   return (
-    <div className="wrapper flex flex-col px-4">
-      <div className="flex flex-col px-2 md:px-20">
-        <p className="py-2 font-[300] text-[#E3E7EA]">
+    <div className="relative flex w-full flex-col gap-8 overflow-hidden bg-[#0b0b0e] px-4 xl:px-12">
+      <div className="absolute top-0 z-0 h-[1px] w-full bg-gradient-to-r from-[#0b0b0e] via-[#FEFEFE] to-[#0b0b0e]"></div>
+      <div className="absolute -top-1/2 left-1/2 z-0 h-[675px] w-[675px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#0071E3] blur-[200px]"></div>
+      <div className="z-30 flex flex-col gap-6 px-2 pt-12 md:px-20">
+        <p className="text-[18px] font-[300] text-[#E3E7EA] opacity-90">
           The Cauldron can produce a variety of content, from short clips to
           extended videos, all while upholding exceptional visual quality and
           adhering to user prompts.
         </p>
-        <p className="py-2 font-[300] text-[#E3E7EA]">
+        <p className="z-30 py-2 font-[300] text-[#E3E7EA] opacity-80">
           Explore a selection of our latest collections.
         </p>
-        <div className="h-[1px] bg-[#3A3F45]"></div>
       </div>
+      <div className="h-[1px] bg-[#3A3F45] px-2 md:mx-20"></div>
 
-      <div className="w-full overflow-hidden px-2 py-2 md:px-20">
+      <div className="z-30 w-full overflow-hidden px-2 py-2 md:px-20">
         <Marquee
+          className="z-30"
           speed={40}
           gradient={true}
-          gradientColor="#0e0f12"
-          gradientWidth={50}
+          gradientColor="#0b0b0e"
+          gradientWidth={80}
           pauseOnHover={true}
         >
           {promptData.map((data, index) => (
-            <div key={index} className="inline-block py-2 pl-3">
+            <div key={index} className="z-30 inline-block py-2 pl-3">
               <PromptCard
                 number={data.number}
                 prompt={data.prompt}

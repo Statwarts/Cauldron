@@ -1,13 +1,13 @@
 import React from "react";
-import {Bg} from "../assets/image";
+import { Bg } from "../assets/image";
 
 const Background = () => {
   return (
     <>
-      <div
-        className="absolute w-full top-32 xs:top-24 md:top-64 pointer-events-none opacity-50"
-        style={{ backgroundImage: `url(${Bg})`, backgroundPosition: "center", width: "100%", height: "100%", zIndex: "0" }}
-      ></div>
+      <div className="w-full">
+        <div className="absolute left-0 top-1/2 lg:top-1/4 z-0 h-[700px] w-1/2 rounded-tr-[600px] bg-gradient-to-t from-[#0b0b0e] to-[#fff] opacity-[1%]"></div>
+        <div className="absolute right-0 top-1/2 lg:top-1/4 z-0 h-[700px] w-1/2 rounded-tl-[600px] bg-gradient-to-t from-[#0b0b0e] to-[#fff] opacity-[1%]"></div>
+      </div>
     </>
   );
 };

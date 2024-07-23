@@ -12,7 +12,7 @@ export default function WhyCauldron() {
   };
   const data = [
     {
-      text: "Faceless videos allow for a consistent visual style and branding that isn’t reliant on the creator’s appearance, which can be more scalable in the long term.",
+      text: "Faceless videos allow for a consistent visual style and branding that isn’t reliant on the creator’s appearance, which can be more scalable.",
       src: Cam,
       name: "Cam",
       bg: Bg1,
@@ -30,7 +30,7 @@ export default function WhyCauldron() {
       bg: Bg3,
     },
     {
-      text: "Customizable subtitles ensure that videos are accessible to a broader audience, including those who are deaf or hard of hearing, and can enhance viewer engagement.",
+      text: "Customizable subtitles ensure that videos are accessible to a broader audience, including those who are deaf .",
       src: Comment,
       name: "Comment",
       bg: Bg4,
@@ -57,7 +57,7 @@ export default function WhyCauldron() {
         <h1 className="text-4xl font-semibold text-[#F1F7FC]">
           Reduced Production Costs
         </h1>
-        <p className="tetx-[#C1C9CF] mb-20 max-w-3xl">
+        <p className="tetx-[#C1C9CF] mb-10 max-w-3xl">
           Efficient video production with faceless content ensures
           cost-effectiveness and scalability, driven by a prompt.
         </p>
@@ -65,23 +65,20 @@ export default function WhyCauldron() {
           {data.map(({ text, src, name, bg }, index) => (
             <React.Fragment key={index}>
               <div className={"mb-4 text-pretty" + numOfLines(text)}>
-                <div className="inner-shadow relative mb-1 flex h-[150px] items-center justify-center overflow-hidden rounded-2xl border border-[#2A2A2A66]">
-                  <img
-                    className="z-10 scale-50 select-none"
-                    src={src}
-                    alt={name}
-                    draggable="false"
-                  />
-                  <img
-                    className="absolute left-1/2 top-1/2 z-0 -translate-x-1/2 -translate-y-1/2 scale-[45%] select-none"
-                    src={bg}
-                    alt={name}
-                    draggable="false"
-                  />
+                <div className="inner-shadow h- relative flex flex-col items-center justify-center gap-0 overflow-hidden rounded-2xl border border-[#2A2A2A66] p-2">
+                  <div className="flex bg-red-500">
+                    <div className="h-[160px] bg-orange-700"></div>
+                    <img
+                      className="absolute left-1/2 top-1/4 z-0 -translate-x-1/2 -translate-y-1/2 scale-[45%] select-none"
+                      src={bg}
+                      alt={name}
+                      draggable="false"
+                    />
+                  </div>
+                  <p className="pl-2 font-[400] leading-5 text-[#b8c1c7cc]">
+                    {text}
+                  </p>
                 </div>
-                <p className="pl-2 font-[400] leading-5 text-[#b8c1c7cc]">
-                  {text}
-                </p>
               </div>
             </React.Fragment>
           ))}

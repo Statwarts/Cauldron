@@ -3,7 +3,7 @@ import Nav from "../../components/Nav/Nav";
 import Button from "../../components/buttons/button";
 import Input from "../../components/input/input";
 import Footer from "../../components/footer/footer";
-import Prompt from "../../components/Prompt";
+import PromptSection from "../../components/PromptSection";
 import WhyCauldron from "../../components/whyCauldron";
 import Background from "../../components/Background";
 import {
@@ -42,7 +42,7 @@ export default function Home() {
             <h1 className="h-20 bg-gradient-to-t from-[#9dabc1] to-white bg-clip-text text-center text-3xl font-semibold tracking-tight text-transparent shadow-lg xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
               Faceless Video Engine
             </h1>
-            <p className="text-2xl text-[#BCCFE2] text-center">
+            <p className="text-center text-2xl text-[#BCCFE2]">
               {" "}
               <span className="instrument-serif-regular-italic">
                 Automate
@@ -54,8 +54,9 @@ export default function Home() {
           </div>
           <Input />
           <div className="wrapper flex-center relative flex h-[600px] flex-col">
-            <div className="flex-center mt-40 rounded-[32px] border-2 border-[hsl(210,100%,60%)] bg-gradient-to-t from-[#0071E3] to-[hsl(210,100%,60%)] p-5">
+            <div className="flex-center relative mt-40 rounded-[32px] border-2 border-[hsl(210,100%,60%)] bg-gradient-to-t from-[#0071E3] to-[hsl(210,100%,60%)] p-5">
               <img src={Cauldron} alt="Cauldron" width={"80px"} />
+              <div className="absolute -bottom-[2%] z-0 h-[1px] w-[220px] bg-gradient-to-r from-[#0b0b0e] via-[#FEFEFE] to-[#0b0b0e]"></div>
             </div>
             <div className="flex-center absolute bottom-[80%] right-[20%] md:right-[25%] lg:right-[32%]">
               <img src={Sparkle} alt="Sparkle" width={"20px"} />
@@ -99,9 +100,7 @@ export default function Home() {
         </div>
       </div>
       <WhyCauldron />
-      <div className="w-full flex-grow bg-gradient-to-t from-[#0B0C0F] to-[#0F1014]">
-        <Prompt />
-      </div>
+      <PromptSection />
       <Footer />
     </>
   );
