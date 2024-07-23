@@ -45,7 +45,7 @@ const Nav = () => {
 
   return (
     <>
-      <div className="fixed z-20 h-[60px] w-full border-[#414141]">
+      <div className="fixed z-[999] h-[60px] w-full border-[#414141]">
         <div className="wrapper flex-center relative m-auto h-full w-full py-3">
           <div style={maskStyle} />
           <div style={maskStyle2} />
