@@ -7,7 +7,7 @@ const PromptVideoCard = ({ number, prompt, src }) => {
     <>
     <div className="w-[480px]">
       <p
-        className="text-[#212122]  font-[300]"
+        className="text-[#212122] hidden  font-[300]"
         style={{ whiteSpace: "normal", wordWrap: "break-word" }}
       >
         <span className="bg-[#0071E321] p-1 text-[#0071E3]">

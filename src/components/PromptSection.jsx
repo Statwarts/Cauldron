@@ -30,7 +30,7 @@ export default function PromptSection() {
     {
       number: 3,
       prompt:
-        "Create a video of 30-40 seconds about dbz broly about  having a different concept than the original movies. The video should be engaging and should be able to keep the viewers hooked.",
+        "Create a video of 30-40 seconds about dbs broly about  having a different concept than the original movies. The video should be engaging and should be able to keep the viewers hooked.",
       src: "https://www.youtube.com/embed/wyduIWpa20w",
     },
     {
