@@ -30,6 +30,9 @@ import Faceless from "./svg/Faceless.svg";
 import Mic from "./svg/Mic.svg";
 import Wallet from "./svg/Wallet.svg";
 import Customize from "./svg/Customize.svg";
+import Idea from "./svg/theProcess/Idea.svg";
+import Generate from "./svg/theProcess/Generate.svg";
+import Publish from "./svg/theProcess/Publish.svg";
 
 export  {
     Cauldron,
@@ -55,5 +58,8 @@ export  {
     Bg1,
     Bg2,
     Bg3,
-    Bg4
+    Bg4,
+    Idea,
+    Generate,
+    Publish
 }

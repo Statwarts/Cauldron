@@ -4,6 +4,7 @@ import Button from "../../components/buttons/button";
 import Input from "../../components/input/input";
 import Footer from "../../components/footer/footer";
 import PromptSection from "../../components/PromptSection";
+import TheProcess from "../../components/theProcess";
 import WhyCauldron from "../../components/whyCauldron";
 import Background from "../../components/Background";
 import {
@@ -99,6 +100,7 @@ export default function Home() {
           <div></div>
         </div>
       </div>
+      <TheProcess />
       <WhyCauldron />
       <PromptSection />
       <Footer />
