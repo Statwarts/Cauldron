@@ -18,19 +18,19 @@ export default function PromptSection() {
     {
       number: 1,
       prompt:
-        "Create me a summary video for the movie John wick Chapter 3. The video should be 30 seconds long and should include the best action scenes from the movie.",
+        "Create a 30-second summary video for the movie John Wick: Chapter 3. Highlight the best action scenes and showcase John Wick's intense fight sequences. Make sure the video is fast-paced and thrilling to capture the audience's attention.",
       src: "https://www.youtube.com/embed/5lhGkQ_0sp4",
     },
     {
       number: 2,
       prompt:
-        "Make a video of about 40 seconds about comparison between Goku and Gojo . The ending should be left to the viewers to assume who is stronger. Ask them to comment their opinion.",
+        "Make a 40-second video comparing Goku from Dragon Ball and Gojo from Jujutsu Kaisen. Highlight their strengths and abilities, and leave the ending open for viewers to decide who is stronger. Encourage them to comment their opinions.",
       src: "https://www.youtube.com/embed/fp2K7uDFjPc",
     },
     {
       number: 3,
       prompt:
-        "Create a video of 30-40 seconds about dbs broly about  having a different concept than the original movies. The video should be engaging and should be able to keep the viewers hooked.",
+        " Create a 30-40 second video about Dragon Ball Super: Broly with a focus on how its concept differs from the original Broly movies. Ensure the video is engaging and captivating, keeping viewers hooked from start to finish.",
       src: "https://www.youtube.com/embed/wyduIWpa20w",
     },
     {
