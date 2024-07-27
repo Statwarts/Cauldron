@@ -1,8 +1,8 @@
 import React from "react";
 
 const Mail = (name) => {
-  return (
-    `<div className="wrap">
+  return `<div className="wrap">
+    <img className="logo" src="https://github.com/Statwarts/Cauldron/blob/main/src/assets/svg/cauldron.svg" alt="Cauldron" />
       <h1 className="header">Welcome to Cauldron!</h1>
       <br />
       <div className="content">
@@ -60,6 +60,9 @@ const Mail = (name) => {
             padding-right: 2.5rem;
           }
         }
+        .logo{
+          width:70px;
+        }
         .wrap {
           max-width: 80rem;
           padding: 0.5rem;
@@ -92,8 +95,7 @@ const Mail = (name) => {
           color: #515151;
         }
       }</style>
-    </div>`
-  );
+    </div>`;
 };
 
 export default Mail;
