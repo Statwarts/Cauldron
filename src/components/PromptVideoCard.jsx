@@ -13,7 +13,7 @@ const PromptVideoCard = ({ number, prompt, src }) => {
         <span className="bg-[#0071E321] p-1 text-[#0071E3]">
           Prompt {number}:
         </span>{" "}
-        <div className="bg-[#212122] inline">
+        <div className="bg-[#212122] inline overflow-hidden">
         {prompt}
         </div>
       </p>

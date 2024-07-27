@@ -18,25 +18,25 @@ export default function PromptSection() {
     {
       number: 1,
       prompt:
-        "Create a 30-second summary video for the movie John Wick: Chapter 3. Highlight the best action scenes and showcase John Wick's intense fight sequences. Make sure the video is fast-paced and thrilling to capture the audience's attention.",
+        "Create a 30-second summary video for the movie John Wick: Chapter 3. Highlight the best action scenes and showcase John Wick's intense fight sequences. ",
       src: "https://www.youtube.com/embed/5lhGkQ_0sp4",
     },
     {
       number: 2,
       prompt:
-        "Make a 40-second video comparing Goku from Dragon Ball and Gojo from Jujutsu Kaisen. Highlight their strengths and abilities, and leave the ending open for viewers to decide who is stronger. Encourage them to comment their opinions.",
+        "Make a 40-second video comparing Goku from Dragon Ball and Gojo from Jujutsu Kaisen. Highlight their strengths and abilities, and leave the ending open for viewers to decide who is stronger.",
       src: "https://www.youtube.com/embed/fp2K7uDFjPc",
     },
     {
       number: 3,
       prompt:
-        " Create a 30-40 second video about Dragon Ball Super: Broly with a focus on how its concept differs from the original Broly movies. Ensure the video is engaging and captivating, keeping viewers hooked from start to finish.",
+        " Create a 30-40 second video about Dragon Ball Super: Broly with a focus on how its concept differs from the original Broly movies.",
       src: "https://www.youtube.com/embed/wyduIWpa20w",
     },
     {
       number: 4,
       prompt:
-        "Create a short video about the askreddit subreddit. The video should be about 30 seconds long and should include the best posts and comments from the subreddit. Keep the background of a minecraft gameplay",
+        "Create a short video about the askreddit subreddit. The video should be about 30 seconds long and should include the best posts and comments from the subreddit.",
       src: "https://www.youtube.com/embed/OxOKbPeFv9o",
     },
   ];
