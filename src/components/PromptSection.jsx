@@ -36,7 +36,7 @@ export default function PromptSection() {
     {
       number: 4,
       prompt:
-        "The ability to create multiple videos in a short amount of time is particularly useful for creators who need to maintain a consistent posting schedule.",
+        "Create a short video about the askreddit subreddit. The video should be about 30 seconds long and should include the best posts and comments from the subreddit.",
       src: "https://www.youtube.com/embed/OxOKbPeFv9o",
     },
   ];
