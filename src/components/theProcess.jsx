@@ -56,7 +56,7 @@ export default function theProcess() {
         <div className="grid grid-cols-1 gap-4 text-[rgb(184,193,199,0.8)] lg:grid-cols-2 xl:grid-cols-3">
           {data.map((item, index) => (
             <div
-              className="flex h-[200px] w-full flex-col items-start justify-between rounded-[24px] bg-gradient-to-tr from-[#ffffff09] via-[#fff0] to-[#fff0] px-6 py-8 md:w-[373px]"
+              className="flex h-[200px] w-full flex-col items-start justify-between rounded-[24px] bg-gradient-to-tr from-[#ffffff09] via-[#fff0] to-[#fff0] px-6 py-8 md:w-[350px]"
               key={index}
             >
               <img src={item.icon} alt={item.title} />
