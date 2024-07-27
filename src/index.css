@@ -64,6 +64,29 @@ body {
   box-shadow: 0px 0px 15px #5dbff80f inset;
 }
 
+.gradient-border {
+  position: relative;
+  z-index: 1;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 999px;
+  padding: 1.5px;
+  background: linear-gradient(90deg, #086EE0, #959697, #4CE0FC);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  z-index: -1;
+}
+
 ::selection {
   background-color: hsla(210, 100%, 45%, 0.2);
 }

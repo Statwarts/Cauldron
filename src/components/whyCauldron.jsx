@@ -63,7 +63,7 @@ export default function WhyCauldron() {
   return (
     <div className="bg-[rgb(11,11,14)] px-6 text-white">
       <div className="m-auto max-w-[700px] pb-40 text-[#c1c9cf]">
-        <h1 className="text-4xl font-semibold text-[#F1F7FC]">
+        <h1 className="text-3xl font-semibold text-[#F1F7FC] md:text-4xl">
           Reduced Production Costs
         </h1>
         <p className="tetx-[#C1C9CF] mb-10 max-w-3xl">
@@ -78,7 +78,7 @@ export default function WhyCauldron() {
                   "relative mb-4 overflow-hidden text-pretty" + numOfLines(text)
                 }
               >
-                <div className="absolute -top-[30%] opacity-40 left-1/2 -z-0 h-[175px] w-[175px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#0071E3]"></div>
+                <div className="absolute -top-[30%] left-1/2 -z-0 h-[175px] w-[175px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#0071E3] opacity-40"></div>
                 <div className="inner-shadow relative flex flex-col items-center justify-center gap-0 overflow-hidden rounded-2xl border border-[#0b2f5649] bg-[#00000012] p-2 shadow-lg backdrop-blur-[80px]">
                   <div className="flex">
                     {/* <div className="absolute -top-1/2 left-1/2 z-0 h-[175px] w-[175px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#0071E3] opacity-70 blur-[80px]"></div> */}
@@ -109,7 +109,9 @@ export default function WhyCauldron() {
       </div>
 
       <div className="m-auto max-w-[960px] items-center pb-40 text-[rgb(193,201,207)]">
-        <h1 className="text-4xl font-semibold lg:pl-0">Batch Processing</h1>
+        <h1 className="text-3xl font-semibold md:text-4xl lg:pl-0">
+          Batch Processing
+        </h1>
         <p className="mb-20 max-w-3xl lg:max-w-[900px] lg:pl-0">
           The ability to create multiple videos in a short amount of time is
           particularly useful for creators who need to maintain a consistent

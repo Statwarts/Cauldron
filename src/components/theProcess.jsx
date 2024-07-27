@@ -37,26 +37,26 @@ export default function theProcess() {
   ];
 
   return (
-    <div className="bg-[rgb(11,11,14)] px-6 text-white">
+    <div className="bg-[rgb(11,11,14)] px-1 text-white md:px-6">
       <div className="m-auto flex flex-col items-center justify-center pb-40 text-[#c1c9cf]">
         <div className="flex flex-col items-center gap-6">
-          <div className="flex-center h-[37px] w-[112px] rounded-full bg-gradient-to-r from-[#086EE0] via-[#959697] to-[#4CE0FC]">
-            <h3 className="flex-center inline-flex rounded-full bg-gradient-to-t from-[#0c1022] to-[#0b0b0e] px-4 py-2 text-sm font-[500]">
+         
+            <h3 className="gradient-border flex-center inline-flex rounded-full bg-gradient-to-t from-[#0c1022] to-[#0b0b0e] px-4 py-2 text-sm font-[500]">
               The Process
             </h3>
-          </div>
-          <h1 className="max-w-lg text-center text-4xl font-semibold text-[#F1F7FC]">
-            Three Steps to Convert Your Ideas to Videos
+          <h1 className="max-w-lg text-center text-3xl font-semibold text-[#F1F7FC] md:text-4xl">
+            Three Steps to Convert Your <br />
+            Ideas to Videos
           </h1>
           <p className="mb-10 max-w-3xl text-center font-[400] text-[#C1C9CF]">
             Follow these simple steps to transform your ideas into engaging
             videos.
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 text-[rgb(184,193,199,0.8)]">
+        <div className="grid grid-cols-1 gap-4 text-[rgb(184,193,199,0.8)] md:grid-cols-2 lg:grid-cols-3">
           {data.map((item, index) => (
             <div
-              className="flex h-[200px] w-[373px] flex-col items-start justify-between rounded-[24px] bg-gradient-to-tr from-[#ffffff09] via-[#fff0] to-[#fff0] px-6 py-8"
+              className="flex h-[200px] w-full flex-col items-start justify-between rounded-[24px] bg-gradient-to-tr from-[#ffffff09] via-[#fff0] to-[#fff0] px-6 py-8 md:w-[373px]"
               key={index}
             >
               <img src={item.icon} alt={item.title} />
