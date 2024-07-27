@@ -18,20 +18,20 @@ export default function PromptSection() {
     {
       number: 1,
       prompt:
-        "The ability to create multiple videos in a short amount of time is particularly useful for creators who need to maintain a consistent posting schedule.",
+        "Create me a summary video for the movie John wich Chapter 3. The video should be 30 minute long and should include the best action scenes from the movie.",
       src: "https://www.youtube.com/embed/5lhGkQ_0sp4",
     },
     {
       number: 2,
       prompt:
-        "The ability to create multiple videos in a short amount of time is particularly useful for creators who need to maintain a consistent posting schedule.",
-      src: "https://www.youtube.com/embed/PD6Ayhv-jqU",
+        "Make a video of about 40 seconds about comparison between Goku and Gojo . The ending should be left to the viewers to assume who is stronger. Ask them to comment their opinion.",
+      src: "https://www.youtube.com/embed/fp2K7uDFjPc",
     },
     {
       number: 3,
       prompt:
-        "The ability to create multiple videos in a short amount of time is particularly useful for creators who need to maintain a consistent posting schedule.",
-      src: "https://www.youtube.com/embed/96jj5K43HBQ",
+        "Create a video of 30-40 seconds about dbz broly about  having a different concept than the original movies. The video should be engaging and should be able to keep the viewers hooked.",
+      src: "https://www.youtube.com/embed/wyduIWpa20w",
     },
     {
       number: 4,
@@ -109,7 +109,7 @@ export default function PromptSection() {
           <p className="text-[18px] font-[300] text-[#E3E7EA] opacity-90">
             We have also uploaded these shorts on our Youtube and Instagram
             platforms and saw varied outcomes - the views for these shorts
-            surpassed 1,000 within the first day.
+            surpassed 10,000 within the first day.
           </p>
           <p className="z-30 py-2 font-[300] text-[#E3E7EA] opacity-80">
             The long form video segment will be available shortly.
