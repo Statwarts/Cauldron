@@ -36,7 +36,7 @@ export default function PromptSection() {
     {
       number: 4,
       prompt:
-        "Create a short video about the askreddit subreddit. The video should be about 30 seconds long and should include the best posts and comments from the subreddit.",
+        "Create a short video about the askreddit subreddit. The video should be about 30 seconds long and should include the best posts and comments from the subreddit. Keep the background of a minecraft gameplay",
       src: "https://www.youtube.com/embed/OxOKbPeFv9o",
     },
   ];
