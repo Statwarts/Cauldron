@@ -18,7 +18,7 @@ export default function PromptSection() {
     {
       number: 1,
       prompt:
-        "Create me a summary video for the movie John wich Chapter 3. The video should be 30 minute long and should include the best action scenes from the movie.",
+        "Create me a summary video for the movie John wick Chapter 3. The video should be 30 seconds long and should include the best action scenes from the movie.",
       src: "https://www.youtube.com/embed/5lhGkQ_0sp4",
     },
     {
