@@ -4,17 +4,18 @@ const Mail = (name) => {
   return ` <div
     style="
       font-family: Arial, sans-serif;
-      max-width: 600px;
+      max-width: 780px;
       margin: 0 auto;
       padding: 20px;
       border: 1px solid #e0e0e0;
+      border-radius: 16px;
+      background-color: rgba(113, 113, 113, 10%);
     "
   >
     <div style="text-align: center">
-      <!-- <img  alt="Cauldron" style="width: 70px;"/> -->
       <a href="https://cauldron.live/"><img src="https://i.ibb.co/2P7M74b/Frame-65.png" style="width: 70px;" alt="Frame-65" ></a>
     </div>
-    <h1 style="text-align: left; color: #0f1014">Welcome to Cauldron!</h1>
+    <h1 style="text-align: center; color: #0f1014">Welcome to Cauldron!</h1>
     <div style="color: #313131; line-height: 1.5">
       <p>Hello ${name},</p>
       <p>
@@ -57,7 +58,7 @@ const Mail = (name) => {
         text-align: center;
       "
     >
-      <p style="font-size: 0.875rem; color: #515151">&copy; 2024 Cauldron.</p>
+      <p style="font-size: 0.75rem; color: #515151">&copy; 2024 Cauldron.</p>
     </div>
   </div>
 `;
