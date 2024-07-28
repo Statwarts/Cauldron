@@ -9,7 +9,7 @@ export default function Footer() {
     <>
       <div className="relative overflow-hidden bg-[rgb(11,11,14)] pt-10 text-white">
         <div className="absolute top-0 z-0 h-[1px] w-full bg-gradient-to-r from-[#0b0b0e] via-[#FEFEFE] to-[#0b0b0e]"></div>
-        <div className="absolute -bottom-[150%] left-1/2 z-0 h-[375px] w-[375px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#0071E3] blur-[200px]"></div>
+        <div className="absolute -bottom-[100%] md:-bottom-[150%] left-1/2 z-0 h-[375px] w-[375px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#0071E3] blur-[200px]"></div>
         <div className="mb-20 flex flex-wrap-reverse justify-between">
           <div className="m-auto flex flex-col justify-center gap-2 pl-2 pt-20 md:pl-10 md:pt-0 lg:ml-32 lg:justify-normal lg:pl-0">
             <img
