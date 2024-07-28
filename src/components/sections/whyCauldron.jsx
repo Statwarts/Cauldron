@@ -1,4 +1,4 @@
-import { whyIcon1, whyIcon2, whyIcon3 } from "../assets/image";
+import { whyIcon1, whyIcon2, whyIcon3 } from "../../assets/image";
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import {
@@ -10,7 +10,7 @@ import {
   Bg2,
   Bg3,
   Bg4,
-} from "../assets/image";
+} from "../../assets/image";
 export default function WhyCauldron() {
   const [isHovering, setIsHovering] = useState([false, false, false]);
   const numOfLines = (text) => {
@@ -75,7 +75,7 @@ export default function WhyCauldron() {
             <React.Fragment key={index}>
               <div
                 className={
-                  "relative mb-4 overflow-hidden text-pretty" + numOfLines(text)
+                  "relative mb-4 overflow-hidden text-pretty w-full md:px-0 sm:px-20" + numOfLines(text)
                 }
               >
                 <div className="absolute -top-[30%] left-1/2 -z-0 h-[175px] w-[175px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#0071E3] opacity-40"></div>
@@ -85,7 +85,7 @@ export default function WhyCauldron() {
                     <div className="z-30 h-[120px]">
                       <img
                         src={src}
-                        alt
+                        alt={name}
                         name="icon"
                         draggable="false"
                         className="absolute left-1/2 top-[30%] -translate-x-1/2 -translate-y-1/2 select-none"

@@ -1,4 +1,4 @@
-import { whyIcon1, whyIcon2, whyIcon3 } from "../assets/image";
+import { whyIcon1, whyIcon2, whyIcon3 } from "../../assets/image";
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import {
@@ -13,7 +13,7 @@ import {
   Idea,
   Generate,
   Publish,
-} from "../assets/image";
+} from "../../assets/image";
 export default function theProcess() {
   const data = [
     {

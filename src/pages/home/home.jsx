@@ -3,9 +3,10 @@ import Nav from "../../components/Nav/Nav";
 import Button from "../../components/buttons/button";
 import Input from "../../components/input/input";
 import Footer from "../../components/footer/footer";
-import PromptSection from "../../components/PromptSection";
-import TheProcess from "../../components/theProcess";
-import WhyCauldron from "../../components/whyCauldron";
+import PromptSection from "../../components/sections/PromptSection";
+import TheProcess from "../../components/sections/theProcess";
+import WhyCauldron from "../../components/sections/whyCauldron";
+
 import Background from "../../components/Background";
 import {
   Cauldron,
