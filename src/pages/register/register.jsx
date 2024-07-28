@@ -5,7 +5,7 @@ import Notification from "../../components/notification/notification";
 import "react-phone-input-2/lib/style.css";
 import Confetti from "react-confetti";
 import Loader from "./Loader";
-import { Discord, Github, X, Cauldron } from "../../assets/image";
+import { Discord2, Github, X, Cauldron } from "../../assets/image";
 import { Link } from "react-router-dom";
 import Mail from "../../components/mail";
 
@@ -50,7 +50,6 @@ export default function Register() {
           ],
           subject: "You're in waitlist!",
           htmlContent: Mail(name),
-          
         }),
       });
       console.log(response);
@@ -196,23 +195,25 @@ export default function Register() {
                 </p>
               )}
               <p className="text-md max-w-md text-center font-[400] text-[#b8c1c7cc]">
-                In the meantime, you can join our Discord and follow us on X for
-                more updates.
+                In the meantime, you can
               </p>
-              <div className="m-auto flex items-center gap-5 md:m-0">
-                <Link to="">
-                  <img
-                    src={Discord}
-                    alt="Instagram"
-                    className="w-8 opacity-80 transition-all hover:opacity-100"
-                  />
-                </Link>
-                <Link to="">
+              <div className="m-auto flex flex-col items-center gap-5 md:m-0">
+                <Link to="https://x.com/Cauldron_live" className="flex-center gap-2 text-center text-white text-opacity-80">
+                Drop a Follow on
                   <img
                     src={X}
                     alt="Linkedin"
-                    className="w-8 opacity-80 transition-all hover:opacity-100"
+                    className="w-6 opacity-80 transition-all hover:opacity-100"
                   />
+                </Link>
+
+                <Link
+                  to="https://discord.gg/VDrzngkvZ2"
+                  target="_blank"
+                  className="flex-center cursor-pointer gap-2 rounded-full border-2 border-[hsl(210,100%,60%)] bg-gradient-to-t from-[#0071E3] to-[hsl(210,100%,60%)] p-1 px-4 text-center text-white transition-all duration-300 hover:brightness-105"
+                >
+                  <img src={Discord2} alt="Discord" className="w-8" />
+                  Join our Community
                 </Link>
               </div>
             </div>

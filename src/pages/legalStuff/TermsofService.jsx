@@ -7,10 +7,10 @@ export default function TermsOfService() {
 
   return (
     <div className="h-full text-balance bg-gradient-to-t from-[rgb(11,12,15)] to-[#0F1014] p-8 text-[#E5F1FD]">
-      <div className="bg-gradient-to-t from-[#9dabc1] to-blue-200 bg-clip-text pb-10 pt-10 text-center text-5xl font-semibold text-transparent">
+      <h1 className="py-12 text-center text-3xl font-semibold text-[#F1F7FC] md:text-4xl">
         <strong>Terms and Conditions</strong>
-      </div>
-      <div className="m-auto flex max-w-5xl flex-col justify-center gap-2 text-pretty">
+      </h1>
+      <div className="m-auto flex max-w-5xl flex-col justify-center gap-2 text-pretty text-[#a6a9af]">
         <p>Welcome to Cauldron!</p>
 
         <p>
@@ -47,13 +47,13 @@ export default function TermsOfService() {
           </a>
           .
         </p>
-        <div className="bg-gradient-to-t from-[#9dabc1] to-blue-200 bg-clip-text pb-10 pt-10 text-5xl font-semibold text-transparent">
-          <h3>
+        <div className="bg-gradient-to-t from-[#9dabc1] to-blue-200 bg-clip-text pb-2 pt-8 text-5xl font-semibold text-transparent">
+          <h3 className="text-3xl font-semibold text-[#F1F7FC] md:text-4xl">
             <strong>Cookies</strong>
           </h3>
         </div>
 
-        <p>
+        <p className="text-[#a6a9af]">
           We employ the use of cookies. By accessing Cauldron, you agreed to use
           cookies in agreement with the Cauldron's Privacy Policy.
         </p>
@@ -65,8 +65,8 @@ export default function TermsOfService() {
           our website. Some of our affiliate/advertising partners may also use
           cookies.
         </p>
-        <div className="bg-gradient-to-t from-[#9dabc1] to-blue-200 bg-clip-text pb-10 pt-10 text-5xl font-semibold text-transparent">
-          <h3>
+        <div className="bg-gradient-to-t from-[#9dabc1] to-blue-200 bg-clip-text pb-2 pt-8 text-5xl font-semibold text-transparent">
+          <h3 className="text-3xl font-semibold text-[#F1F7FC] md:text-4xl">
             <strong>License</strong>
           </h3>
         </div>
@@ -136,8 +136,8 @@ export default function TermsOfService() {
           edit and authorize others to use, reproduce and edit any of your
           Comments in any and all forms, formats or media.
         </p>
-        <div className="bg-gradient-to-t from-[#9dabc1] to-blue-200 bg-clip-text pb-10 pt-10 text-5xl font-semibold text-transparent">
-          <h3>
+        <div className="bg-gradient-to-t from-[#9dabc1] to-blue-200 bg-clip-text pt-8 pb-2 text-5xl font-semibold text-transparent">
+        <h3 className="text-3xl font-semibold text-[#F1F7FC] md:text-4xl">
             <strong>Hyperlinking to our Content</strong>
           </h3>
         </div>
@@ -228,8 +228,8 @@ export default function TermsOfService() {
           No use of Cauldron's logo or other artwork will be allowed for linking
           absent a trademark license agreement.
         </p>
-        <div className="bg-gradient-to-t from-[#9dabc1] to-blue-200 bg-clip-text pb-10 pt-10 text-5xl font-semibold text-transparent">
-          <h3>
+        <div className="bg-gradient-to-t from-[#9dabc1] to-blue-200 bg-clip-text pt-8 pb-2 text-5xl font-semibold text-transparent">
+        <h3 className="text-3xl font-semibold text-[#F1F7FC] md:text-4xl">
             <strong>iFrames</strong>
           </h3>
         </div>
@@ -252,8 +252,8 @@ export default function TermsOfService() {
           infringes, otherwise violates, or advocates the infringement or other
           violation of, any third party rights.
         </p>
-        <div className="bg-gradient-to-t from-[#9dabc1] to-blue-200 bg-clip-text pb-10 pt-10 text-5xl font-semibold text-transparent">
-          <h3>
+        <div className="bg-gradient-to-t from-[#9dabc1] to-blue-200 bg-clip-text pt-8 pb-2 text-5xl font-semibold text-transparent">
+          <h3 className="text-3xl font-semibold text-[#F1F7FC] md:text-4xl">
             <strong>Reservation of Rights</strong>
           </h3>
         </div>
@@ -266,8 +266,8 @@ export default function TermsOfService() {
           continuously linking to our Website, you agree to be bound to and
           follow these linking terms and conditions.
         </p>
-        <div className="bg-gradient-to-t from-[#9dabc1] to-blue-200 bg-clip-text pb-10 pt-10 text-5xl font-semibold text-transparent">
-          <h3>
+        <div className="bg-gradient-to-t from-[#9dabc1] to-blue-200 bg-clip-text pt-8 pb-2 text-5xl font-semibold text-transparent">
+          <h3 className="text-3xl font-semibold text-[#F1F7FC] md:text-4xl">
             <strong>Removal of links from our website</strong>
           </h3>
         </div>
@@ -285,8 +285,8 @@ export default function TermsOfService() {
           ensure that the website remains available or that the material on the
           website is kept up to date.
         </p>
-        <div className="bg-gradient-to-t from-[#9dabc1] to-blue-200 bg-clip-text pb-10 pt-10 text-5xl font-semibold text-transparent">
-          <h3>
+        <div className="bg-gradient-to-t from-[#9dabc1] to-blue-200 bg-clip-text pt-8 pb-2 text-5xl font-semibold text-transparent">
+          <h3 className="text-3xl font-semibold text-[#F1F7FC] md:text-4xl">
             <strong>Disclaimer</strong>
           </h3>
         </div>

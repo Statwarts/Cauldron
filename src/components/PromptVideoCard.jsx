@@ -21,7 +21,7 @@ const PromptVideoCard = ({ number, prompt, src }) => {
         <iframe
           width="480px"
           height="270px"
-          className="rounded-2xl bg-[#212121]"
+          className="rounded-2xl bg-[#121214b7] border border-[#191919]"
           src={youtubeEmbedUrl}
         ></iframe>
       </div>

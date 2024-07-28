@@ -6,7 +6,7 @@ const Loader = () => {
 
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.playbackRate = 1.75;
+      videoRef.current.playbackRate = 2;
     }
     const loadVideo = async () => {
       const videoModule = await import("../../assets/Videos/Loader.mp4");
