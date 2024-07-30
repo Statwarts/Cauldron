@@ -198,8 +198,12 @@ export default function Register() {
                 In the meantime, you can
               </p>
               <div className="m-auto flex flex-col items-center gap-5 md:m-0">
-                <Link to="https://x.com/Cauldron_live" className="flex-center gap-2 text-center text-white text-opacity-80">
-                Drop a Follow on
+                <Link
+                  to="https://x.com/Cauldron_live"
+                  target="_blank"
+                  className="flex-center gap-2 text-center text-white text-opacity-80"
+                >
+                  Drop a Follow on
                   <img
                     src={X}
                     alt="Linkedin"

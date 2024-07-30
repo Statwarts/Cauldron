@@ -15,7 +15,7 @@ const PromptVideoCard = ({ number, prompt, src }) => {
           </span>{" "}
           <div className="inline overflow-hidden bg-[#212122]">{prompt}</div>
         </div>
-        <div className="aspect-w-9 aspect-h-16 min-h-[500px] py-2">
+        <div className="aspect-w-9 aspect-h-16 py-2">
           <iframe
             width="480px"
             height="270px"
