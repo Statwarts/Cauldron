@@ -13,7 +13,7 @@ const Mail = (name) => {
     "
   >
     <div style="text-align: center">
-      <a href="https://cauldron.live/"><img src="https://i.ibb.co/2P7M74b/Frame-65.png" style="width: 70px;" alt="Frame-65" ></a>
+      <a href="https://cauldron.live/"><img src="https://i.ibb.co/2P7M74b/Frame-65.png" style="width: 70px;" alt="Cauldron" ></a>
     </div>
     <h1 style="text-align: center; color: #0f1014">Welcome to Cauldron!</h1>
     <div style="color: #313131; line-height: 1.5">
