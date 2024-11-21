@@ -30,7 +30,7 @@ const Mail = (name) => {
         >
           cauldron.live </a
         >, since May 2024, and we're excited to announce that it will be
-        released in October. Stay tuned for an incredible experience!
+        released in November. Stay tuned for an incredible experience!
       </p>
       <p>
         To get the latest updates, follow us on Twitter:
