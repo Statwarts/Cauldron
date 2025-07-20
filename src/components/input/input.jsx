@@ -37,20 +37,20 @@ export default function Input() {
     }
   }, [messageToUser]);
   
-  const handleSubmit = () => {
-    if (userEmail == "") {
-      return;
-    }
-    if (!checkEmail(userEmail)) {
-      setMessageToUser("Invalid Email");
-      return;
-    }
-    console.log(userEmail);
-    window.localStorage.setItem("email", userEmail);
+  // const handleSubmit = () => {
+  //   if (userEmail == "") {
+  //     return;
+  //   }
+  //   if (!checkEmail(userEmail)) {
+  //     setMessageToUser("Invalid Email");
+  //     return;
+  //   }
+  //   console.log(userEmail);
+  //   window.localStorage.setItem("email", userEmail);
     
-    setMessageToUser("Joining waitlist");
-    window.location.href = "/register";
-  };
+  //   setMessageToUser("Joining waitlist");
+  //   window.location.href = "/register";
+  // };
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {

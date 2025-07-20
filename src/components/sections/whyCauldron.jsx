@@ -15,9 +15,9 @@ export default function WhyCauldron() {
   const [isHovering, setIsHovering] = useState([false, false, false]);
   const numOfLines = (text) => {
     if (text.length > 100) {
-      return " md:max-w-[400px]";
+      return " md:max-w-full";
     }
-    return " md:max-w-[280px]";
+    return " md:max-w-full"
   };
   const data = [
     {
@@ -62,7 +62,7 @@ export default function WhyCauldron() {
 
   return (
     <div className="bg-[rgb(11,11,14)] px-6 text-white">
-      <div className="m-auto max-w-[700px] pb-40 text-[#c1c9cf]">
+      <div className="m-auto max-w-[1000px] pb-40 text-[#c1c9cf]">
         <h1 className="text-3xl font-semibold text-[#F1F7FC] md:text-4xl">
           Reduced Production Costs
         </h1>
@@ -70,19 +70,19 @@ export default function WhyCauldron() {
           Efficient video production with faceless content ensures
           cost-effectiveness and scalability, driven by a prompt.
         </p>
-        <div className="flex flex-wrap justify-center text-[rgb(184,193,199,0.8)] sm:justify-between">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-[rgb(184,193,199,0.8)] w-full">
           {data.map(({ text, src, name, bg }, index) => (
             <React.Fragment key={index}>
               <div
                 className={
-                  "relative mb-4 overflow-hidden text-pretty w-full md:px-0 sm:px-20" + numOfLines(text)
+                  "relative overflow-hidden text-pretty w-full" + numOfLines(text)
                 }
               >
                 <div className="absolute -top-[30%] left-1/2 -z-0 h-[175px] w-[175px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#0071E3] opacity-40"></div>
-                <div className="inner-shadow relative flex flex-col items-center justify-center gap-0 overflow-hidden rounded-2xl border border-[#0b2f5649] bg-[#00000012] p-2 shadow-lg backdrop-blur-[80px]">
+                <div className="inner-shadow relative flex flex-col w-full h-full items-center justify-center gap-0 overflow-hidden rounded-2xl border border-[#0b2f5649] bg-[#00000012] p-4 shadow-lg backdrop-blur-[80px]">
                   <div className="flex">
                     {/* <div className="absolute -top-1/2 left-1/2 z-0 h-[175px] w-[175px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#0071E3] opacity-70 blur-[80px]"></div> */}
-                    <div className="z-30 h-[120px]">
+                    <div className="z-30 h-[120px] w-full">
                       <img
                         src={src}
                         alt={name}
